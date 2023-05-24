@@ -18,7 +18,7 @@ export default {
 export const Primary: Story = {
   args: {
     label: "Button",
-    primary: true
+    primary: true,
   },
 };
 export const Secondary: Story = {

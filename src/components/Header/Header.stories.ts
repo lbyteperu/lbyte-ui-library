@@ -1,24 +1,49 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import Header from './Header';
+import type { Meta, StoryObj } from "@storybook/react";
+import { withRouter } from "storybook-addon-react-router-v6";
+import Header, { User } from "./Header";
 
-const meta = {
-  title: 'Example/Header',
+type Story = StoryObj<typeof Header>;
+
+const userIn: User = {
+  name: "user test",
+};
+
+/**
+ * Button component
+ */
+export default {
   component: Header,
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
-  tags: ['autodocs'],
-  parameters: {
-    // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
-    layout: 'fullscreen',
-  },
+  decorators: [withRouter],
+  tags: ["autodocs"],
+  title: "Header",
 } satisfies Meta<typeof Header>;
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export const Basic: Story = {
+  args: {
+    user: userIn,
+    onLogin: () => {
+      console.log("on login");
+    },
+    onLogout: () => {
+      console.log("on logout");
+    },
+    onCreateAccount: () => {
+      console.log("on create account");
+    },
+  },
+};
 
 export const LoggedIn: Story = {
   args: {
-    user: {
-      name: 'Jane Doe',
+    user: userIn,
+    onLogin: () => {
+      console.log("on login");
+    },
+    onLogout: () => {
+      console.log("on logout");
+    },
+    onCreateAccount: () => {
+      console.log("on create account");
     },
   },
 };
