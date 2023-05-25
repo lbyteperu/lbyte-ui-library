@@ -1,54 +1,30 @@
-import React from "react";
-import "./Button.css";
+import classList from "classnames";
+import React, { ReactNode } from "react";
+import styles from "./Button.module.css";
 
-export interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
-  size?: "small" | "medium" | "large";
-  /**
-   * Button contents
-   */
-  label: string;
-  /**
-   * Optional click handler
-   */
-  onClick?: () => void;
-}
+type ButtonProps = {
+  id?: string;
+  anchor?: boolean;
+  autoFocus?: boolean;
+  children?: ReactNode;
+  circled?: boolean;
+  dataFsExclude?: boolean;
+  disabled?: boolean;
+  quiet?: boolean;
+  filled?: boolean;
+  inverted?: boolean;
+  type?: "button" | "submit" | "reset";
+  "aria-haspopup"?: boolean;
+  styleColor?: "primary" | "secondary" | "success";
+};
 
 /**
- * Primary UI component for user interaction
+ * Default button
  */
-const Button = ({
-  primary = false,
-  size = "medium",
-  backgroundColor,
-  label,
-  ...props
-}: ButtonProps) => {
-  const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
-  return (
-    <button
-      type="button"
-      className={["storybook-button", `storybook-button--${size}`, mode].join(
-        " "
-      )}
-      style={{ backgroundColor }}
-      {...props}
-    >
-      {label}
-    </button>
-  );
+const Button = ({ children, styleColor }: ButtonProps) => {
+  const buttonClassName = classList(styles.base, styles[`${styleColor}`]);
+
+  return <button className={buttonClassName}>{children}</button>;
 };
 
 export default Button;

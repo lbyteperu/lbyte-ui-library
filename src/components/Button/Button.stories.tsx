@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { withRouter } from "storybook-addon-react-router-v6";
 
-import Button from "./Button";
+import { Button } from "./Button";
 
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof Button >;
 
 /**
  * Button component
@@ -17,26 +17,23 @@ export default {
 
 export const Primary: Story = {
   args: {
-    label: "Button",
-    primary: true,
+    children: "button",
+    styleColor: "primary"
   },
 };
 export const Secondary: Story = {
   args: {
-    label: "Button",
+    children: "button",
+    styleColor: "secondary"
   },
 };
 
 export const Large: Story = {
   args: {
-    size: "large",
-    label: "Button",
   },
 };
 
 export const Small: Story = {
   args: {
-    size: "small",
-    label: "Button",
   },
 };
