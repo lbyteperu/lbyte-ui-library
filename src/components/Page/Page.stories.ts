@@ -2,13 +2,9 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { withRouter } from "storybook-addon-react-router-v6";
 import { within, userEvent } from "@storybook/testing-library";
 
-import Page, { User } from "./Page";
+import Page from "./Page";
 
 type Story = StoryObj<typeof Page>;
-
-const userIn: User = {
-  name: "user test",
-};
 
 /**
  * Page component
