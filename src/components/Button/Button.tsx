@@ -2,7 +2,21 @@ import classList from "classnames";
 import React, { ReactNode } from "react";
 import styles from "./Button.module.css";
 
-type ButtonProps = {
+export type ButtonStyleColor =
+  | "primary"
+  | "secondary"
+  | "success"
+  | "danger"
+  | "warning"
+  | "info"
+  | "light"
+  | "dark"
+  | "link";
+
+export type ButtonType = "button" | "submit" | "reset";
+export type ButtonSize = "small" | "medium" | "large";
+
+export type ButtonProps = {
   id?: string;
   anchor?: boolean;
   autoFocus?: boolean;
@@ -13,16 +27,23 @@ type ButtonProps = {
   quiet?: boolean;
   filled?: boolean;
   inverted?: boolean;
-  type?: "button" | "submit" | "reset";
+  type?: ButtonType;
   "aria-haspopup"?: boolean;
-  styleColor?: "primary" | "secondary" | "success";
+  styleColor?: ButtonStyleColor;
+  size?: ButtonSize;
+  wrap?: boolean;
 };
 
 /**
  * Default button
  */
-const Button = ({ children, styleColor }: ButtonProps) => {
-  const buttonClassName = classList(styles.base, styles[`${styleColor}`]);
+const Button = ({ children, styleColor, size, wrap }: ButtonProps) => {
+  const buttonClassName = classList(
+    styleColor === "link" ? "" : styles.base,
+    styles[`${styleColor}`],
+    styles[`storybook-button--${size}`],
+    wrap ? styles["wrap"] : styles["no-wrap"]
+  );
 
   return <button className={buttonClassName}>{children}</button>;
 };

@@ -1,0 +1,71 @@
+:root {
+  --white: white;
+  --black: black;
+
+  --primary-color: white;
+  --primary: rgb(13, 110, 253);
+  --primary-border: rgb(13, 110, 253);
+  --primary-dark: rgb(11, 94, 215);
+  --primary-shadow: rgba(49, 132, 253, 0.5);
+  --primary-shadow-light: rgba(49, 132, 253, 0.25);
+
+  --secondary-color: white;
+  --secondary: rgb(108, 117, 125);
+  --secondary-border: rgb(108, 117, 125);
+  --secondary-dark: rgb(92, 99, 106);
+  --secondary-shadow: rgba(130, 138, 145, 0.5);
+  --secondary-shadow-light: rgba(130, 138, 145, 0.25);
+
+  --success-color: white;
+  --success: rgb(25, 135, 84);
+  --success-border: rgb(25, 135, 84);
+  --success-dark: rgb(21, 115, 71);
+  --success-shadow: rgba(60,153,110,0.5);
+  --success-shadow-light: rgba(60,153,110,0.25);
+
+  --danger-color: white;
+  --danger: rgb(220, 53, 69);
+  --danger-border: rgb(220, 53, 69);
+  --danger-dark: rgb(187, 45, 59);
+  --danger-shadow: rgba(225,83,97,0.5);
+  --danger-shadow-light: rgba(225,83,97,0.25);
+
+  --warning-color: white;
+  --warning: rgb(255, 193, 7);
+  --warning-border: rgb(255, 193, 7);
+  --warning-dark: rgb(255, 202, 44);
+  --warning-shadow: rgba(217,164,6,0.5);
+  --warning-shadow-light: rgba(217,164,6,0.25);
+
+  --info-color: white;
+  --info: rgb(13, 202, 240);
+  --info-border: rgb(13, 202, 240);
+  --info-dark: rgb(49, 210, 242);
+  --info-shadow: rgba(11,172,204,0.5);
+  --info-shadow-light: rgba(11,172,204,0.25);
+
+  --dark-color: white;
+  --dark: black;
+  --dark-border: black;
+  --dark-dark: black;
+  --dark-shadow: rgba(60,153,110,0.5);
+  --dark-shadow-light: rgba(60,153,110,0.25);
+
+  --light-color: white;
+  --light: rgb(248, 249, 250);
+  --light-border: rgb(248, 249, 250);
+  --light-dark: rgb(249, 250, 251);
+  --light-shadow: rgba(211,212,213,0.5);
+  --light-shadow-light: rgba(211,212,213,0.25);
+
+  --dark-color: white;
+  --dark: black;
+  --dark-border: rgb(0, 0, 0);
+  --dark-dark: rgb(0, 0, 0);
+  --dark-shadow: rgba(53, 53, 53, 0.5);
+  --dark-shadow-light: rgba(74, 75, 75, 0.25);
+
+  --link-color: rgb(13, 110, 253);
+  --link-color-hover: rgb(10,88,202);
+  --link-shadow: rgba(13,110,253,0.25);
+}
