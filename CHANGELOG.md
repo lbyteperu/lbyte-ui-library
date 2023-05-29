@@ -10,6 +10,18 @@
 
 ---
 
+# v1.0.7 (Sun May 28 2023)
+
+#### 🐛 Bug Fix
+
+- improve button [#8](https://github.com/lbyteperu/lbyte-ui-library/pull/8) ([@rubenpazch](https://github.com/rubenpazch))
+
+#### Authors: 1
+
+- Ruben Paz Chuspe ([@rubenpazch](https://github.com/rubenpazch))
+
+---
+
 # v1.0.6 (Wed May 24 2023)
 
 #### 🐛 Bug Fix
