@@ -1,5 +1,8 @@
 import React, { ReactNode } from "react";
-type ButtonProps = {
+export type ButtonStyleColor = "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark" | "link";
+export type ButtonType = "button" | "submit" | "reset";
+export type ButtonSize = "small" | "medium" | "large";
+export type ButtonProps = {
     id?: string;
     anchor?: boolean;
     autoFocus?: boolean;
@@ -10,12 +13,14 @@ type ButtonProps = {
     quiet?: boolean;
     filled?: boolean;
     inverted?: boolean;
-    type?: "button" | "submit" | "reset";
+    type?: ButtonType;
     "aria-haspopup"?: boolean;
-    styleColor?: "primary" | "secondary" | "success";
+    styleColor?: ButtonStyleColor;
+    size?: ButtonSize;
+    wrap?: boolean;
 };
 /**
  * Default button
  */
-declare const Button: ({ children, styleColor }: ButtonProps) => React.JSX.Element;
+declare const Button: ({ children, styleColor, size, wrap }: ButtonProps) => React.JSX.Element;
 export default Button;
