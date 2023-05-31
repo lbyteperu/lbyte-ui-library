@@ -118,7 +118,7 @@
     "plugins": [{ "name": "typescript-plugin-css-modules" }],
     "typeRoots": ["./node_modules/@types", "./src/types"],
   },
-  "include": ["src/**/*", "css-module.d.ts", "src/index.css"],
+  "include": ["src/**/*", "css-module.d.ts"],
   "exclude": [
     "node_modules",
     "build",
