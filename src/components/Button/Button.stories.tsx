@@ -13,22 +13,80 @@ export default {
   component: Button,
   decorators: [withRouter],
   tags: ["autodocs"],
-  title: "Button",
 } satisfies Meta<typeof Button>;
 
 export const StyledButton: Story = {
   render: ({ ...args }) => {
     return (
       <div>
-        <Button styleColor="primary" size="medium" children="Primary" />
-        <Button styleColor="secondary" size="medium" children="Secondary" />
-        <Button styleColor="success" size="medium" children="Success" />
-        <Button styleColor="danger" size="medium" children="Danger" />
-        <Button styleColor="warning" size="medium" children="Warning" />
-        <Button styleColor="info" size="medium" children="Info" />
-        <Button styleColor="light" size="medium" children="Light" />
-        <Button styleColor="dark" size="medium" children="Dark" />
-        <Button styleColor="link" size="medium" children="Link" />
+        <Button
+          styleColor="primary"
+          size="medium"
+          children="Primary"
+          buttonTag="button"
+        />
+        <Button
+          styleColor="secondary"
+          size="medium"
+          children="Secondary"
+          buttonTag="button"
+        />
+        <Button
+          styleColor="success"
+          size="medium"
+          children="Success"
+          buttonTag="button"
+        />
+        <Button
+          styleColor="danger"
+          size="medium"
+          children="Danger"
+          buttonTag="button"
+        />
+        <Button
+          styleColor="warning"
+          size="medium"
+          children="Warning"
+          buttonTag="button"
+        />
+        <Button
+          styleColor="info"
+          size="medium"
+          children="Info"
+          buttonTag="button"
+        />
+        <Button
+          styleColor="light"
+          size="medium"
+          children="Light"
+          buttonTag="button"
+        />
+        <Button
+          styleColor="dark"
+          size="medium"
+          children="Dark"
+          buttonTag="button"
+        />
+        <Button
+          styleColor="link"
+          size="medium"
+          children="Link"
+          buttonTag="button"
+        />
+      </div>
+    );
+  },
+};
+
+export const ButtonTags: Story = {
+  render: ({ ...args }) => {
+    return (
+      <div>
+        <Button styleColor="primary" size="medium" children="Link" buttonTag="link" />
+        <Button styleColor="primary" size="medium" children="Button" buttonTag="button"/>
+        <Button styleColor="primary" size="medium" value="Input" buttonTag="input"/>
+        <Button styleColor="primary" size="medium" value="Submit" buttonTag="submit"/>
+        <Button styleColor="primary" size="medium" value="Reset" buttonTag="reset"/>
       </div>
     );
   },

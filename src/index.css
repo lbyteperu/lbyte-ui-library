@@ -1,4 +1,14 @@
 :root {
+  --font-family-trebuchet-ms: 'Trebuchet MS', sans-serif;
+  --font-family-verdana: Verdana, sans-serif;
+  --font-family-arial-sans-serif: Arial, sans-serif;
+  --font-family-tahoma-sans-seirf: Tahoma, sans-serif;
+  --font-family-times-new-roman-serif: 'Times New Roman', serif;
+  --font-family-georgia-serif: Georgia, serif;
+  --font-family-garamond-serif: Garamond, serif;
+  --font-family-courier-new-monospace: 'Courier New', monospace;
+  --font-family-brush-script: 'Brush Script MT', cursive;
+  
   --white: white;
   --black: black;
 

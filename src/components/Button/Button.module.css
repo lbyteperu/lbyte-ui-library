@@ -1,5 +1,5 @@
 .base {
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: --font-family-courier-new-monospace;
   font-weight: 700;
   border: 0;
   border-radius: 0.6rem;
