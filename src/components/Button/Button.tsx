@@ -26,14 +26,13 @@ export type ButtonProps = {
   dataFsExclude?: boolean;
   disabled?: boolean;
   quiet?: boolean;
-  filled?: boolean;
+  outline?: boolean;
   inverted?: boolean;
   buttonTag?: ButtonTag;
   "aria-haspopup"?: boolean;
-  styleColor?: ButtonStyleColor;
+  styleColor: ButtonStyleColor;
   size?: ButtonSize;
   wrap?: boolean;
-  href?: string;
 };
 
 /**
@@ -46,19 +45,21 @@ const Button = ({
   wrap,
   buttonTag,
   value,
-  href,
+  outline,
 }: ButtonProps) => {
   const buttonClassName = classList(
-    styleColor === "link" ? "" : styles.base,
+    styles.base,
     styles[`${styleColor}`],
     styles[`storybook-button--${size}`],
-    wrap ? styles["wrap"] : styles["no-wrap"]
+    wrap ? styles["wrap"] : styles["no-wrap"],
+    outline && styles[`outline-${styleColor}`],
+    outline && styles['outline'],
   );
 
   return buttonTag === "link" ? (
-    <a href={href} role="button" className={buttonClassName}>
+    <button className={buttonClassName} role="button">
       {children}
-    </a>
+    </button>
   ) : buttonTag === "button" ? (
     <button className={buttonClassName} role="button">
       {children}
