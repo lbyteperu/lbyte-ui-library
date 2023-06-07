@@ -7,7 +7,7 @@ import React from "react";
 type Story = StoryObj<typeof Link>;
 
 /**
- * Button component
+ * Link component
  */
 export default {
   component: Link,
@@ -42,12 +42,19 @@ export const ButtonOutlines: Story = {
   render: ({ ...args }) => {
     return (
       <div>
-        <Link styleColor="primary" size="medium" children="Primary" outline />
+        <Link
+          styleColor="primary"
+          size="medium"
+          children="Primary"
+          outline
+          href="#"
+        />
         <Link
           styleColor="secondary"
           size="medium"
           children="Secondary"
           outline
+          href="#"
         />
         <Link
           styleColor="success"
