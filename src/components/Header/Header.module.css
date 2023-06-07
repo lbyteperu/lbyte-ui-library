@@ -1,5 +1,4 @@
 .header {
-  background-color: red;
   display: flex;
   flex-flow: row;
   justify-content: space-around;
@@ -22,4 +21,19 @@
 .login {
   width: 33.3%;
   background-color: azure;
+}
+
+@media screen and (max-width: 350px) {
+  .menu {
+    display: none;
+  }
+  .header {
+    justify-content: space-between;
+  }
+  .login {
+    width: auto;
+  }
+  .logo {
+    width: auto;
+  }
 }
