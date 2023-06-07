@@ -17,19 +17,10 @@ export type ButtonTag = "link" | "button" | "input" | "submit" | "reset";
 export type ButtonSize = "small" | "medium" | "large";
 
 export type ButtonProps = {
-  id?: string;
-  anchor?: boolean;
-  autoFocus?: boolean;
   children?: ReactNode;
   value?: string;
-  circled?: boolean;
-  dataFsExclude?: boolean;
-  disabled?: boolean;
-  quiet?: boolean;
   outline?: boolean;
-  inverted?: boolean;
   buttonTag?: ButtonTag;
-  "aria-haspopup"?: boolean;
   styleColor: ButtonStyleColor;
   size?: ButtonSize;
   wrap?: boolean;
