@@ -85,12 +85,6 @@ export const ButtonTags: Story = {
         <Button
           styleColor="primary"
           size="medium"
-          children="Link"
-          buttonTag="link"
-        />
-        <Button
-          styleColor="primary"
-          size="medium"
           children="Button"
           buttonTag="button"
         />
