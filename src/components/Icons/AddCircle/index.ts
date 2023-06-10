@@ -1,1 +1,1 @@
-export { default } from './AddCircle'
+export { default as AddCircle } from './AddCircle'

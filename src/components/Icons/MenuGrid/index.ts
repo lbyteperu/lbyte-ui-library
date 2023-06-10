@@ -1,2 +1,1 @@
-export { IconSizes } from './MenuGrid'
-export { default } from './MenuGrid'
+export { default as MenuGrid} from './MenuGrid'

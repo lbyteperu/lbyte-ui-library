@@ -1,22 +1,6 @@
 import React from "react";
+import { IconSizes, NumberSize } from "../IconSizes";
 
-export enum IconSizes {
-  xxSmall = "xxSmall",
-  xSmall = "xSmall",
-  small = "small",
-  large = "large",
-  xLarge = "xLarge",
-  xxLarge = "xxLarge",
-}
-
-enum NumberSize {
-  xxSmall = "8",
-  xSmall = "16",
-  small = "24",
-  large = "32",
-  xLarge = "40",
-  xxLarge = "48",
-}
 
 export type IconProps = {
   width?: string;

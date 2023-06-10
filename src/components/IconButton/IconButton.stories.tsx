@@ -138,3 +138,76 @@ export const ButtonOutlines: Story = {
     );
   },
 };
+
+export const ButtonQuiet: Story = {
+  render: ({ ...args }) => {
+    return (
+      <div>
+        <IconButton
+          styleColor="primary"
+          size="medium"
+          icon={<MenuGrid size={IconSizes.small} />}
+          outline
+          href="#"
+          quiet
+        />
+        <IconButton
+          styleColor="secondary"
+          size="medium"
+          icon={<MenuGrid size={IconSizes.small} />}
+          outline
+          href="#"
+          quiet
+        />
+        <IconButton
+          styleColor="success"
+          size="medium"
+          icon={<MenuGrid size={IconSizes.small} />}
+          outline
+          href="#"
+          quiet
+        />
+        <IconButton
+          styleColor="danger"
+          size="medium"
+          icon={<MenuGrid size={IconSizes.small} />}
+          outline
+          href="#"
+          quiet
+        />
+        <IconButton
+          styleColor="warning"
+          size="medium"
+          icon={<MenuGrid size={IconSizes.small} />}
+          outline
+          href="#"
+          quiet
+        />
+        <IconButton
+          styleColor="info"
+          size="medium"
+          icon={<MenuGrid size={IconSizes.small} />}
+          outline
+          href="#"
+          quiet
+        />
+        <IconButton
+          styleColor="light"
+          size="medium"
+          icon={<MenuGrid size={IconSizes.small} />}
+          outline
+          href="#"
+          quiet
+        />
+        <IconButton
+          styleColor="dark"
+          size="medium"
+          icon={<MenuGrid size={IconSizes.small} />}
+          outline
+          href="#"
+          quiet
+        />
+      </div>
+    );
+  },
+};

@@ -17,23 +17,25 @@ export type ButtonStyleColor =
 
 export type IconButtonProps = {
   children?: ReactNode
-  href: string
+  href?: string
   size?: IconButtonSize
   outline?: boolean
   styleColor: ButtonStyleColor
   icon?: ReactNode
+  quiet?: boolean
 };
 
 /**
  * Default button
  */
-const IconButton = ({ children, href, size, outline, styleColor, icon }: IconButtonProps) => {
+const IconButton = ({ children, href, size, outline, styleColor, icon, quiet }: IconButtonProps) => {
   const IconButtonClassname = classList(
     styles.base,
     styles[`${styleColor}`],
     styles[`storybook-button--${size}`],
     outline && styles[`outline-${styleColor}`],
-    outline && styles["outline"]
+    outline && styles["outline"],
+    quiet && styles["quiet"]
   );
 
   return (

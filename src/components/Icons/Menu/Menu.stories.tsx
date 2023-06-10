@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { withRouter } from "storybook-addon-react-router-v6";
 
-import Menu, { IconSizes } from "./Menu";
+import Menu from "./Menu";
+import { IconSizes } from "../IconSizes";
 import React from "react";
 
 type Story = StoryObj<typeof Menu>;

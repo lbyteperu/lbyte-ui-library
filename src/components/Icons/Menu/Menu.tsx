@@ -1,22 +1,5 @@
 import React from "react";
-
-export enum IconSizes {
-  xxSmall = "xxSmall",
-  xSmall = "xSmall",
-  small = "small",
-  large = "large",
-  xLarge = "xLarge",
-  xxLarge = "xxLarge",
-}
-
-enum NumberSize {
-  xxSmall = "8",
-  xSmall = "16",
-  small = "24",
-  large = "32",
-  xLarge = "40",
-  xxLarge = "48",
-}
+import { IconSizes, NumberSize } from "../IconSizes";
 
 export type IconProps = {
   width?: string;
@@ -33,6 +16,8 @@ const Menu = ({ size }: IconProps) => {
       : size === IconSizes.small
       ? NumberSize.small
       : size === IconSizes.large
+      ? NumberSize.medium
+      : size === IconSizes.medium
       ? NumberSize.large
       : size === IconSizes.xLarge
       ? NumberSize.xLarge

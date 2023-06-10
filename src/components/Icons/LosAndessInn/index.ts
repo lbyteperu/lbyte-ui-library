@@ -1,2 +1,1 @@
-export { IconSizes } from './LosAndesInn'
-export { default } from './LosAndesInn'
+export { default as LosAndesInn } from './LosAndesInn'

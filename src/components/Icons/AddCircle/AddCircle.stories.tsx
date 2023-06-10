@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { withRouter } from "storybook-addon-react-router-v6";
 
-import AddCircle, { IconSizes } from "./AddCircle";
+import AddCircle from "./AddCircle";
+import { IconSizes } from "../IconSizes";
 import React from "react";
 
 type Story = StoryObj<typeof AddCircle>;

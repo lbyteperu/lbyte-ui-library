@@ -24,6 +24,7 @@ export type ButtonProps = {
   styleColor: ButtonStyleColor;
   size?: ButtonSize;
   wrap?: boolean;
+  quiet?: boolean;
 };
 
 /**
@@ -37,6 +38,7 @@ const Button = ({
   buttonTag,
   value,
   outline,
+  quiet,
 }: ButtonProps) => {
   const buttonClassName = classList(
     styles.base,
@@ -45,6 +47,7 @@ const Button = ({
     wrap ? styles["wrap"] : styles["no-wrap"],
     outline && styles[`outline-${styleColor}`],
     outline && styles['outline'],
+    quiet && styles['quiet'],
   );
 
   return buttonTag === "link" ? (

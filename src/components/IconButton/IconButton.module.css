@@ -326,3 +326,7 @@
     color: var(--white);
   }
 }
+
+.quiet {
+  border: none;
+}
