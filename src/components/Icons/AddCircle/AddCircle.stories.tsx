@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { withRouter } from "storybook-addon-react-router-v6";
 
 import AddCircle from "./AddCircle";
-import { IconSizes } from "../IconSizes";
 import React from "react";
 
 type Story = StoryObj<typeof AddCircle>;
@@ -17,16 +16,16 @@ export default {
   title: "components/Icons",
 } satisfies Meta<typeof AddCircle>;
 
-export const AddCircleSizes: Story = {
+export const AddCircleIconSizes: Story = {
   render: ({ ...args }) => {
     return (
       <div>
-        <AddCircle size={IconSizes.xxSmall} />
-        <AddCircle size={IconSizes.xSmall} />
-        <AddCircle size={IconSizes.small} />
-        <AddCircle size={IconSizes.large} />
-        <AddCircle size={IconSizes.xLarge} />
-        <AddCircle size={IconSizes.xxLarge} />
+        <AddCircle width={8} height={8} />
+        <AddCircle width={16} height={17} />
+        <AddCircle width={24} height={24} />
+        <AddCircle width={32} height={32} />
+        <AddCircle width={40} height={40} />
+        <AddCircle width={48} height={48} />
       </div>
     );
   },

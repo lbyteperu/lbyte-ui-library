@@ -1,33 +1,13 @@
 import React from "react";
-import { IconSizes, NumberSize } from "../IconSizes";
+import styles from "../index.module.css";
+import { SVGAttributesProps } from "../shared";
 
-export type IconProps = {
-  width?: string;
-  height?: string;
-  size: IconSizes;
-};
-
-const Menu = ({ size }: IconProps) => {
-  const sizeSVG =
-    size === IconSizes.xxSmall
-      ? NumberSize.xxSmall
-      : size === IconSizes.xSmall
-      ? NumberSize.xSmall
-      : size === IconSizes.small
-      ? NumberSize.small
-      : size === IconSizes.large
-      ? NumberSize.medium
-      : size === IconSizes.medium
-      ? NumberSize.large
-      : size === IconSizes.xLarge
-      ? NumberSize.xLarge
-      : size === IconSizes.xxLarge
-      ? NumberSize.xxLarge
-      : NumberSize.small;
+const Menu = ({ height, width }: SVGAttributesProps) => {
   return (
     <svg
-      width={sizeSVG}
-      height={sizeSVG}
+      width={width}
+      height={height}
+      className={styles.color}
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

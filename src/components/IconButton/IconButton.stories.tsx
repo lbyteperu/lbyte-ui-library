@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { withRouter } from "storybook-addon-react-router-v6";
 
 import IconButton from "./IconButton";
-import { AddCircleIcon, IconSizes, MenuIcon, MenuGridIcon } from "../Icons";
+import { AddCircleIcon, MenuIcon, MenuGridIcon } from "../Icons";
 
 import React from "react";
 
@@ -25,49 +25,49 @@ export const StyledIconButton: Story = {
           styleColor="primary"
           size="medium"
           href="#"
-          icon={<AddCircleIcon size={IconSizes.small} />}
+          icon={<AddCircleIcon width={32} height={32} />}
         />
         <IconButton
           styleColor="secondary"
           size="medium"
           href="#"
-          icon={<MenuIcon size={IconSizes.small} />}
+          icon={<MenuIcon width={32} height={32} />}
         />
         <IconButton
           styleColor="success"
           size="medium"
           href="#"
-          icon={<MenuGridIcon size={IconSizes.small} />}
+          icon={<MenuGridIcon width={32} height={32} />}
         />
         <IconButton
           styleColor="danger"
           size="medium"
           href="#"
-          icon={<AddCircleIcon size={IconSizes.small} />}
+          icon={<AddCircleIcon width={32} height={32} />}
         />
         <IconButton
           styleColor="warning"
           size="medium"
           href="#"
-          icon={<MenuIcon size={IconSizes.small} />}
+          icon={<MenuIcon width={32} height={32} />}
         />
         <IconButton
           styleColor="info"
           size="medium"
           href="#"
-          icon={<MenuGridIcon size={IconSizes.small} />}
+          icon={<MenuGridIcon width={32} height={32} />}
         />
         <IconButton
           styleColor="light"
           size="medium"
           href="#"
-          icon={<MenuGridIcon size={IconSizes.small} />}
+          icon={<MenuGridIcon width={32} height={32} />}
         />
         <IconButton
           styleColor="dark"
           size="medium"
           href="#"
-          icon={<MenuIcon size={IconSizes.small} />}
+          icon={<MenuIcon width={32} height={32} />}
         />
       </div>
     );
@@ -81,56 +81,56 @@ export const ButtonOutlines: Story = {
         <IconButton
           styleColor="primary"
           size="medium"
-          icon={<MenuGrid size={IconSizes.small} />}
+          icon={<MenuGridIcon width={32} height={32} />}
           outline
           href="#"
         />
         <IconButton
           styleColor="secondary"
           size="medium"
-          icon={<MenuGrid size={IconSizes.small} />}
+          icon={<MenuGridIcon width={32} height={32} />}
           outline
           href="#"
         />
         <IconButton
           styleColor="success"
           size="medium"
-          icon={<MenuGrid size={IconSizes.small} />}
+          icon={<MenuGridIcon width={32} height={32} />}
           outline
           href="#"
         />
         <IconButton
           styleColor="danger"
           size="medium"
-          icon={<MenuGrid size={IconSizes.small} />}
+          icon={<MenuGridIcon width={32} height={32} />}
           outline
           href="#"
         />
         <IconButton
           styleColor="warning"
           size="medium"
-          icon={<MenuGrid size={IconSizes.small} />}
+          icon={<MenuGridIcon width={32} height={32} />}
           outline
           href="#"
         />
         <IconButton
           styleColor="info"
           size="medium"
-          icon={<MenuGrid size={IconSizes.small} />}
+          icon={<MenuGridIcon width={32} height={32} />}
           outline
           href="#"
         />
         <IconButton
           styleColor="light"
           size="medium"
-          icon={<MenuGrid size={IconSizes.small} />}
+          icon={<MenuGridIcon width={32} height={32} />}
           outline
           href="#"
         />
         <IconButton
           styleColor="dark"
           size="medium"
-          icon={<MenuGrid size={IconSizes.small} />}
+          icon={<MenuGridIcon width={32} height={32} />}
           outline
           href="#"
         />
@@ -146,7 +146,7 @@ export const ButtonQuiet: Story = {
         <IconButton
           styleColor="primary"
           size="medium"
-          icon={<MenuGrid size={IconSizes.small} />}
+          icon={<MenuGridIcon width={32} height={32} />}
           outline
           href="#"
           quiet
@@ -154,7 +154,7 @@ export const ButtonQuiet: Story = {
         <IconButton
           styleColor="secondary"
           size="medium"
-          icon={<MenuGrid size={IconSizes.small} />}
+          icon={<MenuGridIcon width={32} height={32} />}
           outline
           href="#"
           quiet
@@ -162,7 +162,7 @@ export const ButtonQuiet: Story = {
         <IconButton
           styleColor="success"
           size="medium"
-          icon={<MenuGrid size={IconSizes.small} />}
+          icon={<MenuGridIcon width={32} height={32} />}
           outline
           href="#"
           quiet
@@ -170,7 +170,7 @@ export const ButtonQuiet: Story = {
         <IconButton
           styleColor="danger"
           size="medium"
-          icon={<MenuGrid size={IconSizes.small} />}
+          icon={<MenuGridIcon width={32} height={32} />}
           outline
           href="#"
           quiet
@@ -178,7 +178,7 @@ export const ButtonQuiet: Story = {
         <IconButton
           styleColor="warning"
           size="medium"
-          icon={<MenuGrid size={IconSizes.small} />}
+          icon={<MenuGridIcon width={32} height={32} />}
           outline
           href="#"
           quiet
@@ -186,7 +186,7 @@ export const ButtonQuiet: Story = {
         <IconButton
           styleColor="info"
           size="medium"
-          icon={<MenuGrid size={IconSizes.small} />}
+          icon={<MenuGridIcon width={32} height={32} />}
           outline
           href="#"
           quiet
@@ -194,7 +194,7 @@ export const ButtonQuiet: Story = {
         <IconButton
           styleColor="light"
           size="medium"
-          icon={<MenuGrid size={IconSizes.small} />}
+          icon={<MenuGridIcon width={32} height={32} />}
           outline
           href="#"
           quiet
@@ -202,7 +202,7 @@ export const ButtonQuiet: Story = {
         <IconButton
           styleColor="dark"
           size="medium"
-          icon={<MenuGrid size={IconSizes.small} />}
+          icon={<MenuGridIcon width={32} height={32} />}
           outline
           href="#"
           quiet

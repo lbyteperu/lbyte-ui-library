@@ -1,32 +1,15 @@
-import React from "react";
-import { IconSizes, NumberSize } from "../IconSizes";
+import React, { SVGAttributes } from "react";
+import styles from "../index.module.css";
+import classList from "classnames";
+import { SVGAttributesProps } from "../shared";
 
-
-export type IconProps = {
-  width?: string;
-  height?: string;
-  size: IconSizes;
-};
-
-const AddCircle = ({ size }: IconProps) => {
-  const sizeSVG =
-    size === IconSizes.xxSmall
-      ? NumberSize.xxSmall
-      : size === IconSizes.xSmall
-      ? NumberSize.xSmall
-      : size === IconSizes.small
-      ? NumberSize.small
-      : size === IconSizes.large
-      ? NumberSize.large
-      : size === IconSizes.xLarge
-      ? NumberSize.xLarge
-      : size === IconSizes.xxLarge
-      ? NumberSize.xxLarge
-      : NumberSize.small;
+const AddCircle = ({ height, width, color }: SVGAttributesProps) => {
+  const IconClassName = classList(styles.base, styles[`${color}`]);
   return (
     <svg
-      width={sizeSVG}
-      height={sizeSVG}
+      width={height}
+      height={width}
+      className={IconClassName}
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

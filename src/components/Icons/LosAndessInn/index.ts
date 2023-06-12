@@ -1,1 +1,0 @@
-export { default as LosAndesInn } from './LosAndesInn'

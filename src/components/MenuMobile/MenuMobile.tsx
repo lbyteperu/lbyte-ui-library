@@ -1,7 +1,7 @@
 import classList from "classnames";
 import React, { ReactNode } from "react";
 import styles from "./MenuMobile.module.css";
-import { MenuIcon, IconSizes } from "../Icons";
+import { MenuIcon } from "../Icons";
 import Button from "../Button";
 import Modal, { useModal } from "../Modal";
 
@@ -19,7 +19,7 @@ const MenuMobile = ({ children }: MenuMobileProps) => {
         buttonTag="button"
         outline
         quiet
-        children={<MenuIcon size={IconSizes.medium} />}
+        children={<MenuIcon width={24} height={24} />}
         onClick={onOpen}
       />
       <Modal ref={ref} onClose={onClose}>

@@ -1,7 +1,7 @@
 import classList from "classnames";
 import React, { forwardRef, ReactNode, ComponentPropsWithRef } from "react";
 import styles from "./Modal.module.css";
-import { MenuIcon, IconSizes } from "../Icons";
+import { MenuIcon } from "../Icons";
 import Button from "../Button";
 
 type ModalProps = ComponentPropsWithRef<"dialog"> & {
@@ -13,7 +13,7 @@ const Modal = forwardRef<HTMLDialogElement, ModalProps>(
   ({ children, onClose, ...resProps }, ref) => {
     return (
       <dialog ref={ref} {...resProps}>
-        <Button buttonTag="button" styleColor="primary" onClick={onClose}>&times;</Button>
+        <Button color="primary" onClick={onClose}>&times;</Button>
         {children}
       </dialog>
     );

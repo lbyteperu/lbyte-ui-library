@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { withRouter } from "storybook-addon-react-router-v6";
 
 import MenuGrid from "./MenuGrid";
-import { IconSizes } from "../IconSizes";
 import React from "react";
 
 type Story = StoryObj<typeof MenuGrid>;
@@ -21,12 +20,12 @@ export const MenuGridSizes: Story = {
   render: ({ ...args }) => {
     return (
       <div>
-        <MenuGrid size={IconSizes.xxSmall} />
-        <MenuGrid size={IconSizes.xSmall} />
-        <MenuGrid size={IconSizes.small} />
-        <MenuGrid size={IconSizes.large} />
-        <MenuGrid size={IconSizes.xLarge} />
-        <MenuGrid size={IconSizes.xxLarge} />
+        <MenuGrid width={8} height={8} />
+        <MenuGrid width={16} height={16} />
+        <MenuGrid width={24} height={24} />
+        <MenuGrid width={32} height={32} />
+        <MenuGrid width={40} height={40} />
+        <MenuGrid width={48} height={48} />
       </div>
     );
   },

@@ -2,13 +2,12 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { withRouter } from "storybook-addon-react-router-v6";
 
 import Menu from "./Menu";
-import { IconSizes } from "../IconSizes";
 import React from "react";
 
 type Story = StoryObj<typeof Menu>;
 
 /**
- * Button component
+ * MenuIcon  component
  */
 export default {
   component: Menu,
@@ -17,16 +16,16 @@ export default {
   title: "components/Icons",
 } satisfies Meta<typeof Menu>;
 
-export const MenuSizes: Story = {
+export const MenuIconSizes: Story = {
   render: ({ ...args }) => {
     return (
       <div>
-        <Menu size={IconSizes.xxSmall} />
-        <Menu size={IconSizes.xSmall} />
-        <Menu size={IconSizes.small} />
-        <Menu size={IconSizes.large} />
-        <Menu size={IconSizes.xLarge} />
-        <Menu size={IconSizes.xxLarge} />
+        <Menu width={8} height={8}  />
+        <Menu width={16} height={17}  />
+        <Menu width={24} height={24} />
+        <Menu width={32} height={32} />
+        <Menu width={40} height={40} />
+        <Menu width={48} height={48} />
       </div>
     );
   },
