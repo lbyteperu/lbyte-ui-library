@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { withRouter } from "storybook-addon-react-router-v6";
 
 import IconButton from "./IconButton";
-import { AddCircle, IconSizes, Menu, MenuGrid } from "../Icons";
+import { AddCircleIcon, IconSizes, MenuIcon, MenuGridIcon } from "../Icons";
 
 import React from "react";
 
@@ -25,49 +25,49 @@ export const StyledIconButton: Story = {
           styleColor="primary"
           size="medium"
           href="#"
-          icon={<AddCircle size={IconSizes.small} />}
+          icon={<AddCircleIcon size={IconSizes.small} />}
         />
         <IconButton
           styleColor="secondary"
           size="medium"
           href="#"
-          icon={<Menu size={IconSizes.small} />}
+          icon={<MenuIcon size={IconSizes.small} />}
         />
         <IconButton
           styleColor="success"
           size="medium"
           href="#"
-          icon={<MenuGrid size={IconSizes.small} />}
+          icon={<MenuGridIcon size={IconSizes.small} />}
         />
         <IconButton
           styleColor="danger"
           size="medium"
           href="#"
-          icon={<AddCircle size={IconSizes.small} />}
+          icon={<AddCircleIcon size={IconSizes.small} />}
         />
         <IconButton
           styleColor="warning"
           size="medium"
           href="#"
-          icon={<Menu size={IconSizes.small} />}
+          icon={<MenuIcon size={IconSizes.small} />}
         />
         <IconButton
           styleColor="info"
           size="medium"
           href="#"
-          icon={<MenuGrid size={IconSizes.small} />}
+          icon={<MenuGridIcon size={IconSizes.small} />}
         />
         <IconButton
           styleColor="light"
           size="medium"
           href="#"
-          icon={<MenuGrid size={IconSizes.small} />}
+          icon={<MenuGridIcon size={IconSizes.small} />}
         />
         <IconButton
           styleColor="dark"
           size="medium"
           href="#"
-          icon={<Menu size={IconSizes.small} />}
+          icon={<MenuIcon size={IconSizes.small} />}
         />
       </div>
     );

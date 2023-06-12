@@ -15,60 +15,70 @@ export default {
   tags: ["autodocs"],
 } satisfies Meta<typeof Button>;
 
+export const Default: Story = {
+  args: {
+    onClick: () => {
+      console.log("testing");
+    },
+    children:"default"
+  },
+};
+
 export const StyledButton: Story = {
   render: ({ ...args }) => {
     return (
       <div>
         <Button
-          styleColor="primary"
+          color="primary"
           size="medium"
           children="Primary"
           buttonTag="button"
+          onClick={()=> {console.log('testing')}}
         />
         <Button
-          styleColor="secondary"
+          color="secondary"
           size="medium"
           children="Secondary"
           buttonTag="button"
         />
         <Button
-          styleColor="success"
+          color="success"
           size="medium"
           children="Success"
           buttonTag="button"
         />
         <Button
-          styleColor="danger"
+          color="danger"
           size="medium"
           children="Danger"
           buttonTag="button"
         />
         <Button
-          styleColor="warning"
+          color="warning"
           size="medium"
           children="Warning"
           buttonTag="button"
         />
         <Button
-          styleColor="info"
+          color="info"
           size="medium"
           children="Info"
           buttonTag="button"
         />
         <Button
-          styleColor="light"
+          color="light"
           size="medium"
           children="Light"
           buttonTag="button"
         />
         <Button
-          styleColor="dark"
+          color="dark"
           size="medium"
           children="Dark"
           buttonTag="button"
         />
         <Button
-          styleColor="link"
+          color="link"
           size="medium"
           children="Link"
           buttonTag="link"
@@ -83,28 +93,16 @@ export const ButtonTags: Story = {
     return (
       <div>
         <Button
-          styleColor="primary"
+          color="primary"
           size="medium"
           children="Button"
           buttonTag="button"
         />
         <Button
-          styleColor="primary"
+          color="primary"
           size="medium"
-          value="Input"
-          buttonTag="input"
-        />
-        <Button
-          styleColor="primary"
-          size="medium"
-          value="Submit"
-          buttonTag="submit"
-        />
-        <Button
-          styleColor="primary"
-          size="medium"
-          value="Reset"
-          buttonTag="reset"
+          buttonTag="link"
+          children="link"
         />
       </div>
     );
@@ -116,63 +114,63 @@ export const ButtonOutlines: Story = {
     return (
       <div>
         <Button
-          styleColor="primary"
+          color="primary"
           size="medium"
           children="Primary"
           buttonTag="button"
           outline
         />
         <Button
-          styleColor="secondary"
+          color="secondary"
           size="medium"
           children="Secondary"
           buttonTag="button"
           outline
         />
         <Button
-          styleColor="success"
+          color="success"
           size="medium"
           children="Success"
           buttonTag="button"
           outline
         />
         <Button
-          styleColor="danger"
+          color="danger"
           size="medium"
           children="Danger"
           buttonTag="button"
           outline
         />
         <Button
-          styleColor="warning"
+          color="warning"
           size="medium"
           children="Warning"
           buttonTag="button"
           outline
         />
         <Button
-          styleColor="info"
+          color="info"
           size="medium"
           children="Info"
           buttonTag="button"
           outline
         />
         <Button
-          styleColor="light"
+          color="light"
           size="medium"
           children="Light"
           buttonTag="button"
           outline
         />
         <Button
-          styleColor="dark"
+          color="dark"
           size="medium"
           children="Dark"
           buttonTag="button"
           outline
         />
         <Button
-          styleColor="link"
+          color="link"
           size="medium"
           children="Link"
           buttonTag="link"
@@ -188,19 +186,19 @@ export const ButtonSizes: Story = {
     return (
       <div>
         <Button
-          styleColor="primary"
+          color="primary"
           size="small"
           children="Small"
           buttonTag="button"
         />
         <Button
-          styleColor="secondary"
+          color="secondary"
           size="medium"
           children="Medium"
           buttonTag="button"
         />
         <Button
-          styleColor="success"
+          color="success"
           size="large"
           children="Large"
           buttonTag="button"
@@ -213,7 +211,7 @@ export const ButtonSizes: Story = {
 export const LongTextNoWrap: Story = {
   args: {
     children: "really long text not to be wrapped",
-    styleColor: "secondary",
+    color: "secondary",
     size: "medium",
     buttonTag: "button",
   },
@@ -222,7 +220,7 @@ export const LongTextNoWrap: Story = {
 export const LongTextWrapped: Story = {
   args: {
     children: "really long text not to be wrapped",
-    styleColor: "secondary",
+    color: "secondary",
     size: "medium",
     wrap: true,
     buttonTag: "button",
@@ -232,7 +230,7 @@ export const LongTextWrapped: Story = {
 export const LinkButton: Story = {
   args: {
     children: "Link",
-    styleColor: "link",
+    color: "link",
     size: "medium",
     buttonTag: "link",
   },
@@ -241,7 +239,7 @@ export const LinkButton: Story = {
 export const Outline: Story = {
   args: {
     children: "outline",
-    styleColor: "primary",
+    color: "primary",
     size: "medium",
     buttonTag: "button",
     outline: true,

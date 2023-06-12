@@ -13,7 +13,7 @@ const Modal = forwardRef<HTMLDialogElement, ModalProps>(
   ({ children, onClose, ...resProps }, ref) => {
     return (
       <dialog ref={ref} {...resProps}>
-        <button onClick={onClose}>&times;</button>
+        <Button buttonTag="button" styleColor="primary" onClick={onClose}>&times;</Button>
         {children}
       </dialog>
     );

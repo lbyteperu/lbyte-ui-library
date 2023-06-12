@@ -9,11 +9,11 @@
   letter-spacing: 0.0625rem;
   line-height: 1rem;
   font-weight: bold;
+  padding: 0.8rem 1.8rem;
+  font-size: 0.75rem;
   margin: 0.5rem;
   color: var(--white);
   background-color: var(--primary);
-  padding: 0.8rem 1.8rem;
-  font-size: 0.75rem;
   max-width: auto;
 
   &:focus {
@@ -29,7 +29,6 @@
     background-color: var(--primary-shadow);
   }
   &:hover {
-    transition: all 0.5s;
     background-color: var(--primary-dark);
     box-shadow: 0rem 0rem 0rem 0.25rem var(--primary-shadow);
     padding: 0.8rem 1.8rem;
