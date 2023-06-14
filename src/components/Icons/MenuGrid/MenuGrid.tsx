@@ -1,12 +1,26 @@
-import React from "react";
+import React, { SVGAttributes } from "react";
 import styles from "../index.module.css";
 import { SVGAttributesProps } from "../shared";
 
-const MenuGrid = ({ height, width }: SVGAttributesProps) => {
+export type IconSVGAttributes = SVGAttributes<HTMLElement> & SVGAttributesProps;
+
+const MenuGrid = ({ size, width, height }: IconSVGAttributes) => {
+  const remSize =
+    size === "small"
+      ? "1rem"
+      : size === "medium"
+      ? "2rem"
+      : size === "large"
+      ? "3rem"
+      : size === "x-large"
+      ? "4rem"
+      : "2rem";
+  const custom = width && height ? width : "2rem";
+
   return (
     <svg
-      width={width}
-      height={height}
+      width={size ? remSize : custom}
+      height={size ? remSize : custom}
       className={styles.color}
       viewBox="0 0 24 24"
       fill="none"

@@ -15,4 +15,5 @@ export type SVGAttributesProps = SVGAttributes<HTMLElement> & {
   height?: number | string | undefined;
   width?: number | string | undefined;
   color?: IconColor;
+  size?:  'small' | 'medium' | 'large' | 'x-large';
 };

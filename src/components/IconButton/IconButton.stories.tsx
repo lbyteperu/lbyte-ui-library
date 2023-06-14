@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { withRouter } from "storybook-addon-react-router-v6";
 
 import IconButton from "./IconButton";
-import { AddCircleIcon, MenuIcon, MenuGridIcon } from "../Icons";
+import { MenuIcon, MenuGridIcon } from "../Icons";
 
 import React from "react";
 
@@ -22,53 +22,75 @@ export const StyledIconButton: Story = {
     return (
       <div>
         <IconButton
-          styleColor="primary"
+          color="primary"
           size="medium"
-          href="#"
-          icon={<AddCircleIcon width={32} height={32} />}
-        />
-        <IconButton
-          styleColor="secondary"
-          size="medium"
-          href="#"
-          icon={<MenuIcon width={32} height={32} />}
-        />
-        <IconButton
-          styleColor="success"
-          size="medium"
-          href="#"
           icon={<MenuGridIcon width={32} height={32} />}
         />
         <IconButton
-          styleColor="danger"
+          color="secondary"
           size="medium"
-          href="#"
-          icon={<AddCircleIcon width={32} height={32} />}
-        />
-        <IconButton
-          styleColor="warning"
-          size="medium"
-          href="#"
-          icon={<MenuIcon width={32} height={32} />}
-        />
-        <IconButton
-          styleColor="info"
-          size="medium"
-          href="#"
           icon={<MenuGridIcon width={32} height={32} />}
         />
         <IconButton
-          styleColor="light"
+          color="success"
           size="medium"
-          href="#"
           icon={<MenuGridIcon width={32} height={32} />}
         />
         <IconButton
-          styleColor="dark"
+          color="danger"
           size="medium"
-          href="#"
+          icon={<MenuGridIcon width={32} height={32} />}
+        />
+        <IconButton
+          color="warning"
+          size="medium"
+          icon={<MenuGridIcon width={32} height={32} />}
+        />
+        <IconButton
+          color="info"
+          size="medium"
+          icon={<MenuGridIcon width={32} height={32} />}
+        />
+        <IconButton
+          color="light"
+          size="medium"
+          icon={<MenuGridIcon width={32} height={32} />}
+        />
+        <IconButton
+          color="dark"
+          size="medium"
           icon={<MenuIcon width={32} height={32} />}
         />
+      </div>
+    );
+  },
+};
+
+export const SizeIconButton: Story = {
+  render: ({ ...args }) => {
+    return (
+      <div>
+        <IconButton
+          color="primary"
+          size="small"
+          icon={<MenuGridIcon size='small' />}
+        />
+        <IconButton
+          color="secondary"
+          size="medium"
+          icon={<MenuGridIcon size="medium"/>}
+        />
+        <IconButton
+          color="success"
+          size="large"
+          icon={<MenuGridIcon size="large"/>}
+        />
+        <IconButton
+          color="danger"
+          size="x-large"
+          icon={<MenuGridIcon size="x-large"/>}
+        />
+        
       </div>
     );
   },
@@ -79,60 +101,52 @@ export const ButtonOutlines: Story = {
     return (
       <div>
         <IconButton
-          styleColor="primary"
+          color="primary"
           size="medium"
           icon={<MenuGridIcon width={32} height={32} />}
           outline
-          href="#"
         />
         <IconButton
-          styleColor="secondary"
+          color="secondary"
           size="medium"
           icon={<MenuGridIcon width={32} height={32} />}
           outline
-          href="#"
         />
         <IconButton
-          styleColor="success"
+          color="success"
           size="medium"
           icon={<MenuGridIcon width={32} height={32} />}
           outline
-          href="#"
         />
         <IconButton
-          styleColor="danger"
+          color="danger"
           size="medium"
           icon={<MenuGridIcon width={32} height={32} />}
           outline
-          href="#"
         />
         <IconButton
-          styleColor="warning"
+          color="warning"
           size="medium"
           icon={<MenuGridIcon width={32} height={32} />}
           outline
-          href="#"
         />
         <IconButton
-          styleColor="info"
+          color="info"
           size="medium"
           icon={<MenuGridIcon width={32} height={32} />}
           outline
-          href="#"
         />
         <IconButton
-          styleColor="light"
+          color="light"
           size="medium"
           icon={<MenuGridIcon width={32} height={32} />}
           outline
-          href="#"
         />
         <IconButton
-          styleColor="dark"
+          color="dark"
           size="medium"
           icon={<MenuGridIcon width={32} height={32} />}
           outline
-          href="#"
         />
       </div>
     );
@@ -144,67 +158,59 @@ export const ButtonQuiet: Story = {
     return (
       <div>
         <IconButton
-          styleColor="primary"
+          color="primary"
           size="medium"
           icon={<MenuGridIcon width={32} height={32} />}
           outline
-          href="#"
           quiet
         />
         <IconButton
-          styleColor="secondary"
+          color="secondary"
           size="medium"
           icon={<MenuGridIcon width={32} height={32} />}
           outline
-          href="#"
           quiet
         />
         <IconButton
-          styleColor="success"
+          color="success"
           size="medium"
           icon={<MenuGridIcon width={32} height={32} />}
           outline
-          href="#"
           quiet
         />
         <IconButton
-          styleColor="danger"
+          color="danger"
           size="medium"
           icon={<MenuGridIcon width={32} height={32} />}
           outline
-          href="#"
           quiet
         />
         <IconButton
-          styleColor="warning"
+          color="warning"
           size="medium"
           icon={<MenuGridIcon width={32} height={32} />}
           outline
-          href="#"
           quiet
         />
         <IconButton
-          styleColor="info"
+          color="info"
           size="medium"
           icon={<MenuGridIcon width={32} height={32} />}
           outline
-          href="#"
           quiet
         />
         <IconButton
-          styleColor="light"
+          color="light"
           size="medium"
           icon={<MenuGridIcon width={32} height={32} />}
           outline
-          href="#"
           quiet
         />
         <IconButton
-          styleColor="dark"
+          color="dark"
           size="medium"
           icon={<MenuGridIcon width={32} height={32} />}
           outline
-          href="#"
           quiet
         />
       </div>

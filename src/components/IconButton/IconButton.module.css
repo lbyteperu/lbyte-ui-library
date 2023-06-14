@@ -14,8 +14,7 @@
   flex-flow: row;
   justify-content: center;
   align-items: center;
-  width: 2rem;
-  height: 2rem;
+
   &:focus {
     transition: all 0.5s;
   }
@@ -218,7 +217,7 @@
   }
 }
 
-.storybook-button--small {
+.small {
   padding: 0.5rem 1.5rem;
   font-size: 0.55rem;
   &:focus {
@@ -228,7 +227,7 @@
     padding: 0.5rem 1.5rem;
   }
 }
-.storybook-button--medium {
+.medium {
   padding: 0;
   font-size: 0.75rem;
   &:focus {
@@ -238,7 +237,7 @@
     padding: 0;
   }
 }
-.storybook-button--large {
+.large {
   padding: 1rem 2rem;
   font-size: 1.1rem;
   &:focus {
@@ -329,4 +328,35 @@
 
 .quiet {
   border: none;
+}
+
+.small-wrapper {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  &:focus {
+    padding: 0;
+  }
+  &:hover {
+    padding: 0;
+  }
+}
+.medium-wrapper {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.large-wrapper {
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0;
+  &:focus {
+    padding: 0;
+  }
+  &:hover {
+    padding: 0;
+  }
+}
+.x-large-wrapper {
+  width: 4.5rem;
+  height: 4.5rem;
 }

@@ -1,8 +1,8 @@
 import classList from "classnames";
-import React, { ReactNode } from "react";
+import React, { ReactNode, ButtonHTMLAttributes } from "react";
 import styles from "./IconButton.module.css";
 
-export type IconButtonSize = "small" | "medium" | "large";
+export type IconButtonSize = "small" | "medium" | "large" | "x-large";
 
 export type ButtonStyleColor =
   | "primary"
@@ -13,33 +13,42 @@ export type ButtonStyleColor =
   | "info"
   | "light"
   | "dark"
-  | "IconButton"
+  | "IconButton";
 
 export type IconButtonProps = {
-  children?: ReactNode
-  href?: string
-  size?: IconButtonSize
-  outline?: boolean
-  styleColor: ButtonStyleColor
-  icon?: ReactNode
-  quiet?: boolean
+  size?: IconButtonSize;
+  outline?: boolean;
+  color: ButtonStyleColor;
+  icon?: ReactNode;
+  quiet?: boolean;
 };
 
+export type IconButtonHTMLAttributesProps = ButtonHTMLAttributes<HTMLElement> &
+  IconButtonProps;
+
 /**
- * Default button
+ * Default icon button
  */
-const IconButton = ({ children, href, size, outline, styleColor, icon, quiet }: IconButtonProps) => {
+const IconButton = ({
+  size,
+  outline,
+  color,
+  icon,
+  quiet,
+  onClick,
+}: IconButtonHTMLAttributesProps) => {
   const IconButtonClassname = classList(
     styles.base,
-    styles[`${styleColor}`],
-    styles[`storybook-button--${size}`],
-    outline && styles[`outline-${styleColor}`],
+    styles[`${color}`],
+    styles[`${size}`],
+    styles[`${size}-wrapper`],
+    outline && styles[`outline-${color}`],
     outline && styles["outline"],
     quiet && styles["quiet"]
   );
 
   return (
-    <button className={IconButtonClassname} role="button">
+    <button className={IconButtonClassname} role="button" onClick={onClick}>
       {icon}
     </button>
   );

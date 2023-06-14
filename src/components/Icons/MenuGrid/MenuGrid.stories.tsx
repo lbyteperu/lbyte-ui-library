@@ -13,10 +13,18 @@ export default {
   component: MenuGrid,
   decorators: [withRouter],
   tags: ["autodocs"],
-  title: "components/Icons",
+  title: "components/Icons/MenuGrid",
 } satisfies Meta<typeof MenuGrid>;
 
-export const MenuGridSizes: Story = {
+export const Default: Story = {
+  args: {
+    onClick: () => {
+      console.log("testing");
+    },
+  },
+};
+
+export const CustomSizes: Story = {
   render: ({ ...args }) => {
     return (
       <div>
@@ -26,6 +34,19 @@ export const MenuGridSizes: Story = {
         <MenuGrid width={32} height={32} />
         <MenuGrid width={40} height={40} />
         <MenuGrid width={48} height={48} />
+      </div>
+    );
+  },
+};
+
+export const FixedSizes: Story = {
+  render: ({ ...args }) => {
+    return (
+      <div>
+        <MenuGrid size="small" />
+        <MenuGrid size="medium" />
+        <MenuGrid size="large" />
+        <MenuGrid size="x-large" />
       </div>
     );
   },
