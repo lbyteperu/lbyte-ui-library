@@ -1,38 +1,40 @@
 import classList from "classnames";
-import React, { forwardRef, ReactNode, ComponentPropsWithRef } from "react";
+import React, { useState, useRef } from "react";
+import { Transition } from "react-transition-group";
 import styles from "./Modal.module.css";
 import { MenuIcon } from "../Icons";
 import Button from "../Button";
 
-type ModalProps = ComponentPropsWithRef<"dialog"> & {
-  onClose: () => void;
-  children: ReactNode;
+const duration = 3000;
+
+const defaultStyle = {
+  transition: `opacity ${duration}ms ease-in-out`,
+  opacity: 0,
 };
 
-const Modal = forwardRef<HTMLDialogElement, ModalProps>(
-  ({ children, onClose, ...resProps }, ref) => {
-    return (
-      <dialog ref={ref} {...resProps}>
-        <Button color="primary" onClick={onClose}>&times;</Button>
-        {children}
-      </dialog>
-    );
-  }
-);
+const transitionStyles = {
+  entering: { opacity: 1 },
+  entered: { opacity: 1 },
+  exiting: { opacity: 0 },
+  exited: { opacity: 0 },
+};
 
-export function useModal() {
-  const ref = React.useRef<HTMLDialogElement>(null);
-  const onOpen = () => ref.current?.showModal();
-  const onClose = () => {
-    ref!.current!.className = "close";
-    setTimeout(() => {
-      ref!.current!.close();
-      ref!.current!.className = "";
-    }, 300); // matching css animation timing
-  };
+const Modal = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(true);
+  const nodeRef = useRef(null);
 
-  return { ref, onOpen, onClose };
-}
-
+  return (
+    <>
+      <Transition nodeRef={nodeRef} in={true} timeout={duration}>
+        {isOpen && (
+          <div className={styles.modal} role="dialog">
+            {"testing content asd jasldf asjdf lkasdj flasd"}
+            <button>testing</button>
+          </div>
+        )}
+      </Transition>
+    </>
+  );
+};
 
 export default Modal;

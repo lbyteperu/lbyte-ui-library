@@ -32,56 +32,56 @@ export const StyledButton: Story = {
           color="primary"
           size="medium"
           children="Primary"
-          buttonTag="button"
+          type="button"
           onClick={()=> {console.log('testing')}}
         />
         <Button
           color="secondary"
           size="medium"
           children="Secondary"
-          buttonTag="button"
+          type="button"
         />
         <Button
           color="success"
           size="medium"
           children="Success"
-          buttonTag="button"
+          type="button"
         />
         <Button
           color="danger"
           size="medium"
           children="Danger"
-          buttonTag="button"
+          type="button"
         />
         <Button
           color="warning"
           size="medium"
           children="Warning"
-          buttonTag="button"
+          type="button"
         />
         <Button
           color="info"
           size="medium"
           children="Info"
-          buttonTag="button"
+          type="button"
         />
         <Button
           color="light"
           size="medium"
           children="Light"
-          buttonTag="button"
+          type="button"
         />
         <Button
           color="dark"
           size="medium"
           children="Dark"
-          buttonTag="button"
+          type="button"
         />
         <Button
           color="link"
           size="medium"
           children="Link"
-          buttonTag="link"
+          type="button"
         />
       </div>
     );
@@ -96,12 +96,12 @@ export const ButtonTags: Story = {
           color="primary"
           size="medium"
           children="Button"
-          buttonTag="button"
+          type="button"
         />
         <Button
           color="primary"
           size="medium"
-          buttonTag="link"
+          type="button"
           children="link"
         />
       </div>
@@ -117,63 +117,63 @@ export const ButtonOutlines: Story = {
           color="primary"
           size="medium"
           children="Primary"
-          buttonTag="button"
+          type="button"
           outline
         />
         <Button
           color="secondary"
           size="medium"
           children="Secondary"
-          buttonTag="button"
+          type="button"
           outline
         />
         <Button
           color="success"
           size="medium"
           children="Success"
-          buttonTag="button"
+          type="button"
           outline
         />
         <Button
           color="danger"
           size="medium"
           children="Danger"
-          buttonTag="button"
+          type="button"
           outline
         />
         <Button
           color="warning"
           size="medium"
           children="Warning"
-          buttonTag="button"
+          type="button"
           outline
         />
         <Button
           color="info"
           size="medium"
           children="Info"
-          buttonTag="button"
+          type="button"
           outline
         />
         <Button
           color="light"
           size="medium"
           children="Light"
-          buttonTag="button"
+          type="button"
           outline
         />
         <Button
           color="dark"
           size="medium"
           children="Dark"
-          buttonTag="button"
+          type="button"
           outline
         />
         <Button
           color="link"
           size="medium"
           children="Link"
-          buttonTag="link"
+          type="button"
           outline
         />
       </div>
@@ -189,19 +189,19 @@ export const ButtonSizes: Story = {
           color="primary"
           size="small"
           children="Small"
-          buttonTag="button"
+          type="button"
         />
         <Button
           color="secondary"
           size="medium"
           children="Medium"
-          buttonTag="button"
+          type="button"
         />
         <Button
           color="success"
           size="large"
           children="Large"
-          buttonTag="button"
+          type="button"
         />
       </div>
     );
@@ -213,7 +213,7 @@ export const LongTextNoWrap: Story = {
     children: "really long text not to be wrapped",
     color: "secondary",
     size: "medium",
-    buttonTag: "button",
+    type: "button",
   },
 };
 
@@ -223,7 +223,7 @@ export const LongTextWrapped: Story = {
     color: "secondary",
     size: "medium",
     wrap: true,
-    buttonTag: "button",
+    type: "button",
   },
 };
 
@@ -232,7 +232,7 @@ export const LinkButton: Story = {
     children: "Link",
     color: "link",
     size: "medium",
-    buttonTag: "link",
+    type: "button",
   },
 };
 
@@ -241,7 +241,7 @@ export const Outline: Story = {
     children: "outline",
     color: "primary",
     size: "medium",
-    buttonTag: "button",
+    type: "button",
     outline: true,
   },
 };
