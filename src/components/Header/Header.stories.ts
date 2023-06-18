@@ -15,7 +15,7 @@ export default {
   component: Header,
   decorators: [withRouter],
   tags: ["autodocs"],
-  title: "Header",
+  title: "components/Header",
 } satisfies Meta<typeof Header>;
 
 export const Basic: Story = {

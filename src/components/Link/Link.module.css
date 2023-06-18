@@ -9,33 +9,14 @@
   letter-spacing: 0.0625rem;
   line-height: 1rem;
   font-weight: bold;
+  padding: 0.625rem 1.25rem 0.5rem;
   margin: 0.5rem;
   color: var(--white);
-  background-color: var(--primary);
-  padding: 0.8rem 1.8rem;
-  font-size: 0.75rem;
-  max-width: auto;
-
   &:focus {
     transition: all 0.5s;
-    background-color: var(--primary-dark);
-    box-shadow: 0rem 0rem 0rem 0.25rem var(--primary-shadow-light);
-    padding: 0.8rem 1.8rem;
-  }
-  &:focus-within {
-    background-color: var(--primary-dark);
-  }
-  &:visited {
-    background-color: var(--primary-shadow);
   }
   &:hover {
     transition: all 0.5s;
-    background-color: var(--primary-dark);
-    box-shadow: 0rem 0rem 0rem 0.25rem var(--primary-shadow);
-    padding: 0.8rem 1.8rem;
-  }
-  &:focus-visible {
-    outline: 0rem 0rem 0rem 0.25rem var(--primary-shadow-light);
   }
 }
 .primary {
@@ -222,13 +203,14 @@
     box-shadow: 0 0 0 0.25rem var(--link-shadow);
   }
   &:hover {
-    color: var(--white);
+    color: var(--link-color-hover);
   }
   &:focus-visible {
     outline: 0 0 0 0.25rem var(--link-shadow);
   }
 }
-.small {
+
+.storybook-button--small {
   padding: 0.5rem 1.5rem;
   font-size: 0.55rem;
   &:focus {
@@ -238,7 +220,7 @@
     padding: 0.5rem 1.5rem;
   }
 }
-.medium {
+.storybook-button--medium {
   padding: 0.8rem 1.8rem;
   font-size: 0.75rem;
   &:focus {
@@ -248,7 +230,7 @@
     padding: 0.8rem 1.8rem;
   }
 }
-.large {
+.storybook-button--large {
   padding: 1rem 2rem;
   font-size: 1.1rem;
   &:focus {
@@ -257,10 +239,6 @@
   &:hover {
     padding: 1rem 2rem;
   }
-}
-
-.wrap {
-  max-width: 14rem;
 }
 
 .outline {
@@ -339,20 +317,4 @@
   &:hover {
     color: var(--white);
   }
-}
-.outline-link {
-  border-color: var(--link-color);
-  color: var(--link-color);
-  &:focus-within {
-    color: var(--link-color);
-  }
-  &:hover {
-    color: var(--white);
-    background-color: var(--link-color);
-    box-shadow: 0 0 0 0.25rem var(--link-shadow);
-  }
-}
-
-.quiet {
-  border: none;
 }

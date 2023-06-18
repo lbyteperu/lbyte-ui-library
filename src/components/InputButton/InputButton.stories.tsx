@@ -1,26 +1,27 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { withRouter } from "storybook-addon-react-router-v6";
 
-import Button from "./Button";
+import InputButton from "./InputButton";
 import React from "react";
 
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof InputButton>;
 
 /**
  * Button component
+ * by default the button is primary and medium size
  */
 export default {
-  component: Button,
+  component: InputButton,
   decorators: [withRouter],
   tags: ["autodocs"],
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof InputButton>;
 
 export const Default: Story = {
   args: {
+    value: "default",
     onClick: () => {
       console.log("testing");
     },
-    children:"default"
   },
 };
 
@@ -28,180 +29,228 @@ export const StyledButton: Story = {
   render: ({ ...args }) => {
     return (
       <div>
-        <Button
+        <InputButton
           color="primary"
           size="medium"
-          children="Primary"
+          value="Primary"
           type="button"
-          onClick={()=> {console.log('testing')}}
+          onClick={() => {
+            console.log("testing");
+          }}
+          id="inputField"
         />
-        <Button
+        <InputButton
           color="secondary"
           size="medium"
-          children="Secondary"
+          value="Secondary"
           type="button"
+          onClick={() => {
+            console.log("testing");
+          }}
+          id="inputField"
         />
-        <Button
+        <InputButton
           color="success"
           size="medium"
-          children="Success"
+          value="Success"
           type="button"
+          onClick={() => {
+            console.log("testing");
+          }}
+          id="inputField"
         />
-        <Button
+        <InputButton
           color="danger"
           size="medium"
-          children="Danger"
+          value="Danger"
           type="button"
+          onClick={() => {
+            console.log("testing");
+          }}
+          id="inputField"
         />
-        <Button
+        <InputButton
           color="warning"
           size="medium"
-          children="Warning"
+          value="Warning"
           type="button"
+          onClick={() => {
+            console.log("testing");
+          }}
+          id="inputField"
         />
-        <Button
+        <InputButton
           color="info"
           size="medium"
-          children="Info"
+          value="Info"
           type="button"
+          onClick={() => {
+            console.log("testing");
+          }}
+          id="inputField"
         />
-        <Button
+        <InputButton
           color="light"
           size="medium"
-          children="Light"
+          value="Light"
           type="button"
+          onClick={() => {
+            console.log("testing");
+          }}
+          id="inputField"
         />
-        <Button
+        <InputButton
           color="dark"
           size="medium"
-          children="Dark"
+          value="Dark"
           type="button"
+          onClick={() => {
+            console.log("testing");
+          }}
+          id="inputField"
         />
-        <Button
+        <InputButton
           color="link"
           size="medium"
-          children="Link"
+          value="Link"
           type="button"
+          onClick={() => {
+            console.log("testing");
+          }}
+          id="inputField"
         />
       </div>
     );
   },
 };
 
-export const ButtonTags: Story = {
+export const InputButtonTypes: Story = {
   render: ({ ...args }) => {
     return (
       <div>
-        <Button
+        <InputButton
           color="primary"
           size="medium"
-          children="Button"
           type="button"
+          value="button"
+          id="inputField"
         />
-        <Button
+        <InputButton
           color="primary"
           size="medium"
-          type="button"
-          children="link"
+          type="submit"
+          value="submit"
+          id="inputField"
+        />
+        <InputButton
+          color="primary"
+          size="medium"
+          type="reset"
+          value="reset"
+          id="inputField"
         />
       </div>
     );
   },
 };
 
-export const ButtonOutlines: Story = {
+export const IconButtonOutlines: Story = {
   render: ({ ...args }) => {
     return (
       <div>
-        <Button
+        <InputButton
           color="primary"
           size="medium"
-          children="Primary"
+          value="Primary"
           type="button"
           outline
+          id="inputField"
         />
-        <Button
+        <InputButton
           color="secondary"
           size="medium"
-          children="Secondary"
+          value="Secondary"
           type="button"
           outline
+          id="inputField"
         />
-        <Button
+        <InputButton
           color="success"
           size="medium"
-          children="Success"
+          value="Success"
           type="button"
           outline
+          id="inputField"
         />
-        <Button
+        <InputButton
           color="danger"
           size="medium"
-          children="Danger"
+          value="Danger"
           type="button"
           outline
+          id="inputField"
         />
-        <Button
+        <InputButton
           color="warning"
           size="medium"
-          children="Warning"
+          value="Warning"
           type="button"
           outline
+          id="inputField"
         />
-        <Button
+        <InputButton
           color="info"
           size="medium"
-          children="Info"
+          value="Info"
           type="button"
           outline
+          id="inputField"
         />
-        <Button
+        <InputButton
           color="light"
           size="medium"
-          children="Light"
+          value="Light"
           type="button"
           outline
+          id="inputField"
         />
-        <Button
+        <InputButton
           color="dark"
           size="medium"
-          children="Dark"
+          value="Dark"
           type="button"
           outline
-        />
-        <Button
-          color="link"
-          size="medium"
-          children="Link"
-          type="button"
-          outline
+          id="inputField"
         />
       </div>
     );
   },
 };
 
-export const ButtonSizes: Story = {
+export const IconButtonSizes: Story = {
   render: ({ ...args }) => {
     return (
       <div>
-        <Button
+        <InputButton
           color="primary"
           size="small"
-          children="Small"
+          value="Small"
           type="button"
+          id="inputField"
         />
-        <Button
+        <InputButton
           color="secondary"
           size="medium"
-          children="Medium"
+          value="Medium"
           type="button"
+          id="inputField"
         />
-        <Button
+        <InputButton
           color="success"
           size="large"
-          children="Large"
+          value="Large"
           type="button"
+          id="inputField"
         />
       </div>
     );
@@ -210,38 +259,38 @@ export const ButtonSizes: Story = {
 
 export const LongTextNoWrap: Story = {
   args: {
-    children: "really long text not to be wrapped",
+    value: "really long text not to be wrapped",
     color: "secondary",
     size: "medium",
-    type: "button",
+    id: "testing",
   },
 };
 
 export const LongTextWrapped: Story = {
   args: {
-    children: "really long text not to be wrapped",
+    value: "really long text not to be wrapped",
     color: "secondary",
     size: "medium",
     wrap: true,
-    type: "button",
+    id: "testing",
   },
 };
 
 export const LinkButton: Story = {
   args: {
-    children: "Link",
+    value: "Link",
     color: "link",
     size: "medium",
-    type: "button",
+    id: "testing",
   },
 };
 
 export const Outline: Story = {
   args: {
-    children: "outline",
+    value: "outline",
     color: "primary",
     size: "medium",
-    type: "button",
     outline: true,
+    id: "testing",
   },
 };

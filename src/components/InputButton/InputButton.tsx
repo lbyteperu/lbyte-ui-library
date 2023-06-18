@@ -1,8 +1,8 @@
 import classList from "classnames";
 import React, { ReactNode, ButtonHTMLAttributes } from "react";
-import styles from "./Button.module.css";
+import styles from "./InputButton.module.css";
 
-export type ButtonColor =
+export type InputButtonColor =
   | "primary"
   | "secondary"
   | "success"
@@ -13,33 +13,34 @@ export type ButtonColor =
   | "dark"
   | "link";
 
-type ButtonProps = {
+type InputButtonProps = {
   children?: ReactNode;
-  value?: string;
   outline?: boolean;
-  color: ButtonColor;
-  size?: ButtonSize;
+  color?: InputButtonColor;
+  size?: InputButtonSize;
   wrap?: boolean;
   quiet?: boolean;
 };
 
-export type ButtonHTMLAttributesProps = ButtonHTMLAttributes<HTMLElement> &
-  ButtonProps;
+export type InputButtonHTMLAttributesProps = ButtonHTMLAttributes<HTMLElement> &
+  InputButtonProps;
 
-export type ButtonSize = "small" | "medium" | "large";
+export type InputButtonSize = "small" | "medium" | "large";
 
 /**
  * Default button
  */
-const Button = ({
-  children,
+const InputButton = ({
   color,
   size,
   wrap,
+  value,
   outline,
   quiet,
   onClick,
-}: ButtonHTMLAttributesProps) => {
+  type,
+  id,
+}: InputButtonHTMLAttributesProps) => {
   const buttonClassName = classList(
     styles.base,
     styles[`${color}`],
@@ -51,10 +52,15 @@ const Button = ({
   );
 
   return (
-    <button className={buttonClassName} role="button" onClick={onClick}>
-      {children}
-    </button>
+    <input
+      type={type ? type : "button"}
+      role="button"
+      className={buttonClassName}
+      defaultValue={value}
+      onClick={onClick}
+      id={id}
+    />
   );
 };
 
-export default Button;
+export default InputButton;

@@ -1,0 +1,39 @@
+.base {
+  color: var(--black);
+}
+
+.primary {
+  color: var(--primary);
+}
+
+.secondary {
+  color: var(--secondary);
+}
+
+.success {
+  color: var(--success);
+}
+
+.danger {
+  color: var(--danger);
+}
+
+.warning {
+  color: var(--black);
+}
+
+.info {
+  color: var(--black);
+}
+
+.light {
+  color: var(--black);
+}
+
+.dark {
+  color: var(--black);
+}
+
+.link {
+  color: transparent;
+}

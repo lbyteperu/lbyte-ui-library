@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "@testing-library/react";
 
-import Button from "./Button";
+import InputButton from "./InputButton";
 
-describe("Button", () => {
+describe("InputButton", () => {
   test("renders the Button component", () => {
-    render(<Button styleColor="primary"/>);
+    render(<InputButton styleColor="primary" />);
   });
 });
