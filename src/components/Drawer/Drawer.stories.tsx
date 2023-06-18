@@ -1,19 +1,19 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { withRouter } from "storybook-addon-react-router-v6";
-import Modal from "./Modal";
+import Drawer from "./Drawer";
 
 import React from "react";
 
-type Story = StoryObj<typeof Modal>;
+type Story = StoryObj<typeof Drawer>;
 
 /**
  * Modal component
  */
 export default {
-  component: Modal,
+  component: Drawer,
   decorators: [withRouter],
   tags: ["autodocs"],
-} satisfies Meta<typeof Modal>;
+} satisfies Meta<typeof Drawer>;
 
 export const Default: Story = {
   args: {},
