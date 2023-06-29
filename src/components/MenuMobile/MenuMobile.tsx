@@ -1,16 +1,15 @@
-import classList from "classnames";
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState } from "react";
 import styles from "./MenuMobile.module.css";
 import { MenuGridIcon } from "../Icons";
 import IconButton from "../IconButton";
-// import Modal, { useModal } from "../Modal";
+import Drawer from "../Drawer/Drawer";
 
 export type MenuMobileProps = {
   children?: ReactNode;
 };
 
 const MenuMobile = ({ children }: MenuMobileProps) => {
-
+  const [open, setOpen] = useState(true);
   return (
     <menu className={styles.menu}>
       <IconButton
@@ -20,6 +19,14 @@ const MenuMobile = ({ children }: MenuMobileProps) => {
         quiet
         size="medium"
         icon={<MenuGridIcon size="medium" />}
+        onClick={() => setOpen((prevState) => !prevState)}
+      />
+      <Drawer
+        open={open}
+        mountOnEnter
+        unmountOnExit
+        setOpen={setOpen}
+        appearFrom="left"
       />
     </menu>
   );

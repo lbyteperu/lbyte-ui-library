@@ -110,11 +110,12 @@
 * generic
 */
 .fromLeft {
-  background-color: rgb(189, 113, 65);
+  background-color: var(--white);
   height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
+  border-width: 1px;
 }
 .fromRight {
   background-color: rgb(97, 34, 87);

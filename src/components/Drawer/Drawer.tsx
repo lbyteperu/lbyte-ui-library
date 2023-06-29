@@ -1,13 +1,10 @@
-import classList from "classnames";
 import React, { useRef, useState } from "react";
 import ReactDOM from "react-dom";
-import { createPortal } from "react-dom";
 import { CSSTransition } from "react-transition-group";
 import styles from "./Drawer.module.css";
-import Content from "./Content";
 import { CSSTransitionClassNames } from "react-transition-group/CSSTransition";
 import IconButton from "../IconButton/IconButton";
-import { AddCircle } from "../Icons/AddCircle";
+import { CloseIcon } from "../Icons";
 
 export type DrawerProps = {
   children?: React.ReactNode;
@@ -94,7 +91,7 @@ function Drawer({
       <div ref={nodeRef} className={mainCss}>
         <IconButton
           color="primary"
-          icon={<AddCircle size="small" />}
+          icon={<CloseIcon size="small" />}
           size="small"
           onClick={() => setOpen && setOpen(false)}
         />
