@@ -1,2 +1,2 @@
-export { useModal } from './Modal'
-export { default } from './Modal'
+// export { useModal } from './Modal'
+export { default } from './Drawer'

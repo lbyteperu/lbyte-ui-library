@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 import ReactDOM from "react-dom";
 import { CSSTransition } from "react-transition-group";
-import styles from "./Drawer.module.css";
+import styles from "./DrawerMenuMobile.module.css";
 import { CSSTransitionClassNames } from "react-transition-group/CSSTransition";
 import IconButton from "../IconButton/IconButton";
 import { CloseIcon } from "../Icons";
 
-export type DrawerProps = {
+export type DrawerMenuMobileProps = {
   children?: React.ReactNode;
   open?: boolean;
   className?: string;
@@ -54,7 +54,7 @@ const TrasitionOptions: Record<string, CSSTransitionClassNames> = {
   },
 };
 
-function Drawer({
+function DrawerMenuMobile({
   children,
   open = false,
   unmountOnExit,
@@ -62,7 +62,7 @@ function Drawer({
   setOpen,
   portalContainer = document.body,
   appearFrom = "left",
-}: DrawerProps) {
+}: DrawerMenuMobileProps) {
   const nodeRef = useRef(null);
 
   const { fromLeft, fromRight, fromAbove, fromBelow } = styles;
@@ -102,4 +102,4 @@ function Drawer({
   );
 }
 
-export default Drawer;
+export default DrawerMenuMobile;
