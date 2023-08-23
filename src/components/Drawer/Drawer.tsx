@@ -15,12 +15,12 @@ export type DrawerProps = {
   mountOnEnter?: boolean;
   portalContainer?: Element | DocumentFragment;
   onClosed?: () => void;
-  appearFrom?: "left" | "right" | "above" | "below";
+  appear?: "fromLeft" | "fromRight" | "fromAbove" | "fromBelow";
   setOpen?: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const TrasitionOptions: Record<string, CSSTransitionClassNames> = {
-  left: {
+const trasitionOptions: Record<string, CSSTransitionClassNames> = {
+  fromLeft: {
     enter: styles.fromLeftEnter,
     enterActive: styles.fromLeftEnterActive,
     enterDone: styles.fromLeftEnterDone,
@@ -28,7 +28,7 @@ const TrasitionOptions: Record<string, CSSTransitionClassNames> = {
     exitActive: styles.fromLeftExitActive,
     exitDone: styles.fromLeftExitDone,
   },
-  right: {
+  fromRight: {
     enter: styles.fromRightEnter,
     enterActive: styles.fromRightEnterActive,
     enterDone: styles.fromRightEnterDone,
@@ -36,7 +36,7 @@ const TrasitionOptions: Record<string, CSSTransitionClassNames> = {
     exitActive: styles.fromRightExitActive,
     exitDone: styles.fromRightExitDone,
   },
-  above: {
+  fromAbove: {
     enter: styles.fromAboveEnter,
     enterActive: styles.fromAboveEnterActive,
     enterDone: styles.fromAboveEnterDone,
@@ -44,7 +44,7 @@ const TrasitionOptions: Record<string, CSSTransitionClassNames> = {
     exitActive: styles.fromAboveExitActive,
     exitDone: styles.fromAboveExitDone,
   },
-  below: {
+  fromBelow: {
     enter: styles.fromBelowEnter,
     enterActive: styles.fromBelowEnterActive,
     enterDone: styles.fromBelowEnterDone,
@@ -61,34 +61,22 @@ function Drawer({
   mountOnEnter,
   setOpen,
   portalContainer = document.body,
-  appearFrom = "left",
+  appear = "fromLeft",
 }: DrawerProps) {
   const nodeRef = useRef(null);
-
-  const { fromLeft, fromRight, fromAbove, fromBelow } = styles;
-  const mainCss =
-    appearFrom === "left"
-      ? fromLeft
-      : appearFrom === "right"
-      ? fromRight
-      : appearFrom === "above"
-      ? fromAbove
-      : appearFrom === "below"
-      ? fromBelow
-      : "left";
 
   return ReactDOM.createPortal(
     <CSSTransition
       in={open}
       nodeRef={nodeRef}
       timeout={300}
-      classNames={TrasitionOptions[appearFrom]}
+      classNames={trasitionOptions[appear]}
       unmountOnExit={unmountOnExit}
       mountOnEnter={mountOnEnter}
       onEnter={() => console.log("on enter")}
       onExited={() => console.log("on exited")}
     >
-      <div ref={nodeRef} className={mainCss}>
+      <div ref={nodeRef} className={styles[appear]}>
         <IconButton
           color="primary"
           icon={<CloseIcon size="small" />}

@@ -18,7 +18,7 @@ export const Default: Story = {
 /**
  * Examples with state
  */
-const DrawerWithState = ({ appearFrom }: DrawerProps) => {
+const DrawerWithState = ({ appear }: DrawerProps) => {
   const [open, setOpen] = useState(false);
   const handleOnChange = () => {};
   return (
@@ -30,7 +30,7 @@ const DrawerWithState = ({ appearFrom }: DrawerProps) => {
         mountOnEnter
         unmountOnExit
         setOpen={setOpen}
-        appearFrom={appearFrom}
+        appear={appear}
       />
       <Button
         onClick={() => {
@@ -53,17 +53,17 @@ const DrawerWithState = ({ appearFrom }: DrawerProps) => {
 };
 
 export const FromLeft: Story = {
-  render: () => <DrawerWithState appearFrom="left" />,
+  render: () => <DrawerWithState appear="fromLeft" />,
 };
 
 export const FromRight: Story = {
-  render: () => <DrawerWithState appearFrom="right" />,
+  render: () => <DrawerWithState appear="fromRight" />,
 };
 
 export const FromAbove: Story = {
-  render: () => <DrawerWithState appearFrom="above" />,
+  render: () => <DrawerWithState appear="fromAbove" />,
 };
 
 export const FromBelow: Story = {
-  render: () => <DrawerWithState appearFrom="below" />,
+  render: () => <DrawerWithState appear="fromBelow" />,
 };

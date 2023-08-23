@@ -1,7 +1,7 @@
 import React, { ReactNode, useState } from "react";
 import styles from "./MenuMobile.module.css";
-import { MenuGridIcon } from "../Icons";
-import IconButton from "../IconButton";
+import { MenuIcon } from "../Icons";
+import SquareButton from "../SquareButton";
 import Drawer from "../Drawer/Drawer";
 
 export type MenuMobileProps = {
@@ -12,21 +12,22 @@ const MenuMobile = ({ children }: MenuMobileProps) => {
   const [open, setOpen] = useState(true);
   return (
     <menu className={styles.menu}>
-      <IconButton
+      <SquareButton
         color="secondary"
         type="button"
         outline
         quiet
         size="medium"
-        icon={<MenuGridIcon size="medium" />}
+        icon={<MenuIcon size="medium" />}
         onClick={() => setOpen((prevState) => !prevState)}
+        className={styles.squareButton}
       />
       <Drawer
         open={open}
         mountOnEnter
         unmountOnExit
         setOpen={setOpen}
-        appearFrom="left"
+        appear="fromLeft"
       />
     </menu>
   );

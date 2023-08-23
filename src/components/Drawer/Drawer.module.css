@@ -116,6 +116,8 @@
   top: 0;
   left: 0;
   border-width: 1px;
+  background-color: red;
+
 }
 .fromRight {
   background-color: rgb(97, 34, 87);
