@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 import ReactDOM from "react-dom";
 import { CSSTransition } from "react-transition-group";
-import styles from "./Drawer.module.css";
+import styles from "./DrawerMenuMobile.module.css";
 import { CSSTransitionClassNames } from "react-transition-group/CSSTransition";
 import IconButton from "../IconButton/IconButton";
 import { CloseIcon } from "../Icons";
 
-export type DrawerProps = {
+export type DrawerMenuMobileProps = {
   children?: React.ReactNode;
   open?: boolean;
   className?: string;
@@ -15,12 +15,12 @@ export type DrawerProps = {
   mountOnEnter?: boolean;
   portalContainer?: Element | DocumentFragment;
   onClosed?: () => void;
-  appear?: "fromLeft" | "fromRight" | "fromAbove" | "fromBelow";
+  appearFrom?: "left" | "right" | "above" | "below";
   setOpen?: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const trasitionOptions: Record<string, CSSTransitionClassNames> = {
-  fromLeft: {
+const TrasitionOptions: Record<string, CSSTransitionClassNames> = {
+  left: {
     enter: styles.fromLeftEnter,
     enterActive: styles.fromLeftEnterActive,
     enterDone: styles.fromLeftEnterDone,
@@ -28,7 +28,7 @@ const trasitionOptions: Record<string, CSSTransitionClassNames> = {
     exitActive: styles.fromLeftExitActive,
     exitDone: styles.fromLeftExitDone,
   },
-  fromRight: {
+  right: {
     enter: styles.fromRightEnter,
     enterActive: styles.fromRightEnterActive,
     enterDone: styles.fromRightEnterDone,
@@ -36,7 +36,7 @@ const trasitionOptions: Record<string, CSSTransitionClassNames> = {
     exitActive: styles.fromRightExitActive,
     exitDone: styles.fromRightExitDone,
   },
-  fromAbove: {
+  above: {
     enter: styles.fromAboveEnter,
     enterActive: styles.fromAboveEnterActive,
     enterDone: styles.fromAboveEnterDone,
@@ -44,7 +44,7 @@ const trasitionOptions: Record<string, CSSTransitionClassNames> = {
     exitActive: styles.fromAboveExitActive,
     exitDone: styles.fromAboveExitDone,
   },
-  fromBelow: {
+  below: {
     enter: styles.fromBelowEnter,
     enterActive: styles.fromBelowEnterActive,
     enterDone: styles.fromBelowEnterDone,
@@ -54,29 +54,41 @@ const trasitionOptions: Record<string, CSSTransitionClassNames> = {
   },
 };
 
-function Drawer({
+function DrawerMenuMobile({
   children,
   open = false,
   unmountOnExit,
   mountOnEnter,
   setOpen,
   portalContainer = document.body,
-  appear = "fromLeft",
-}: DrawerProps) {
+  appearFrom = "left",
+}: DrawerMenuMobileProps) {
   const nodeRef = useRef(null);
+
+  const { fromLeft, fromRight, fromAbove, fromBelow } = styles;
+  const mainCss =
+    appearFrom === "left"
+      ? fromLeft
+      : appearFrom === "right"
+      ? fromRight
+      : appearFrom === "above"
+      ? fromAbove
+      : appearFrom === "below"
+      ? fromBelow
+      : "left";
 
   return ReactDOM.createPortal(
     <CSSTransition
       in={open}
       nodeRef={nodeRef}
       timeout={300}
-      classNames={trasitionOptions[appear]}
+      classNames={TrasitionOptions[appearFrom]}
       unmountOnExit={unmountOnExit}
       mountOnEnter={mountOnEnter}
       onEnter={() => console.log("on enter")}
       onExited={() => console.log("on exited")}
     >
-      <div ref={nodeRef} className={styles[appear]}>
+      <div ref={nodeRef} className={mainCss}>
         <IconButton
           color="primary"
           icon={<CloseIcon size="small" />}
@@ -90,4 +102,4 @@ function Drawer({
   );
 }
 
-export default Drawer;
+export default DrawerMenuMobile;

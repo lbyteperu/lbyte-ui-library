@@ -1,36 +1,36 @@
 import React, { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import Drawer, { DrawerProps } from "./Drawer";
+import DrawerMenuMobile, { DrawerMenuMobileProps } from "./DrawerMenuMobile";
 import Button from "../Button";
-type Story = StoryObj<typeof Drawer>;
+type Story = StoryObj<typeof DrawerMenuMobile>;
 
 /**
  * Modal component
  */
 export default {
-  component: Drawer,
+  component: DrawerMenuMobile,
   tags: ["autodocs"],
-} satisfies Meta<typeof Drawer>;
+} satisfies Meta<typeof DrawerMenuMobile>;
 
 export const Default: Story = {
-  render: () => <Drawer />,
+  render: () => <DrawerMenuMobile />,
 };
 /**
  * Examples with state
  */
-const DrawerWithState = ({ appear }: DrawerProps) => {
+const DrawerMenuMobileWithState = ({ appearFrom }: DrawerMenuMobileProps) => {
   const [open, setOpen] = useState(false);
   const handleOnChange = () => {};
   return (
     <div
       style={{ display: "flex", flexFlow: "row", justifyContent: "flex-end" }}
     >
-      <Drawer
+      <DrawerMenuMobile
         open={open}
         mountOnEnter
         unmountOnExit
         setOpen={setOpen}
-        appear={appear}
+        appearFrom={appearFrom}
       />
       <Button
         onClick={() => {
@@ -53,17 +53,17 @@ const DrawerWithState = ({ appear }: DrawerProps) => {
 };
 
 export const FromLeft: Story = {
-  render: () => <DrawerWithState appear="fromLeft" />,
+  render: () => <DrawerMenuMobileWithState appearFrom="left" />,
 };
 
 export const FromRight: Story = {
-  render: () => <DrawerWithState appear="fromRight" />,
+  render: () => <DrawerMenuMobileWithState appearFrom="right" />,
 };
 
 export const FromAbove: Story = {
-  render: () => <DrawerWithState appear="fromAbove" />,
+  render: () => <DrawerMenuMobileWithState appearFrom="above" />,
 };
 
 export const FromBelow: Story = {
-  render: () => <DrawerWithState appear="fromBelow" />,
+  render: () => <DrawerMenuMobileWithState appearFrom="below" />,
 };

@@ -1,7 +1,7 @@
 .header {
   display: flex;
   flex-flow: row;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 3rem;
   width: 100%;
   padding: 0;
@@ -9,18 +9,26 @@
 }
 
 .logo {
-  width: 33.3%;
-  background-color: antiquewhite;
+  width: auto;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu {
   width: 33.3%;
   background-color: aqua;
+  
 }
 
 .login {
-  width: 33.3%;
+  width: auto;
   background-color: azure;
+  display: flex;
+  flex-flow: row;
+  justify-content:left;
+  align-items: center;
 }
 
 @media screen and (max-width: 350px) {

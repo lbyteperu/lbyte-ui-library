@@ -1,13 +1,13 @@
 :root {
-  --font-family-trebuchet-ms: 'Trebuchet MS', sans-serif;
+  --font-family-trebuchet-ms: "Trebuchet MS", sans-serif;
   --font-family-verdana: Verdana, sans-serif;
   --font-family-arial-sans-serif: Arial, sans-serif;
   --font-family-tahoma-sans-seirf: Tahoma, sans-serif;
-  --font-family-times-new-roman-serif: 'Times New Roman', serif;
+  --font-family-times-new-roman-serif: "Times New Roman", serif;
   --font-family-georgia-serif: Georgia, serif;
   --font-family-garamond-serif: Garamond, serif;
-  --font-family-courier-new-monospace: 'Courier New', monospace;
-  --font-family-brush-script: 'Brush Script MT', cursive;
+  --font-family-courier-new-monospace: "Courier New", monospace;
+  --font-family-brush-script: "Brush Script MT", cursive;
 
   --white: white;
   --black: black;
@@ -25,32 +25,32 @@
   --success: rgb(25, 135, 84);
   --success-border: rgb(25, 135, 84);
   --success-dark: rgb(21, 115, 71);
-  --success-shadow: rgba(60,153,110,0.5);
-  --success-shadow-light: rgba(60,153,110,0.25);
+  --success-shadow: rgba(60, 153, 110, 0.5);
+  --success-shadow-light: rgba(60, 153, 110, 0.25);
 
   --danger: rgb(220, 53, 69);
   --danger-dark: rgb(187, 45, 59);
-  --danger-shadow: rgba(225,83,97,0.5);
-  --danger-shadow-light: rgba(225,83,97,0.25);
+  --danger-shadow: rgba(225, 83, 97, 0.5);
+  --danger-shadow-light: rgba(225, 83, 97, 0.25);
 
   --warning: rgb(255, 193, 7);
   --warning-dark: rgb(255, 202, 44);
-  --warning-shadow: rgba(217,164,6,0.5);
-  --warning-shadow-light: rgba(217,164,6,0.25);
+  --warning-shadow: rgba(217, 164, 6, 0.5);
+  --warning-shadow-light: rgba(217, 164, 6, 0.25);
 
   --info: rgb(13, 202, 240);
   --info-dark: rgb(49, 210, 242);
-  --info-shadow: rgba(11,172,204,0.5);
-  --info-shadow-light: rgba(11,172,204,0.25);
+  --info-shadow: rgba(11, 172, 204, 0.5);
+  --info-shadow-light: rgba(11, 172, 204, 0.25);
 
   --dark: black;
-  --dark-shadow: rgba(60,153,110,0.5);
-  --dark-shadow-light: rgba(60,153,110,0.25);
+  --dark-shadow: rgba(60, 153, 110, 0.5);
+  --dark-shadow-light: rgba(60, 153, 110, 0.25);
 
   --light: rgb(248, 249, 250);
   --light-dark: rgb(249, 250, 251);
-  --light-shadow: rgba(211,212,213,0.5);
-  --light-shadow-light: rgba(211,212,213,0.25);
+  --light-shadow: rgba(211, 212, 213, 0.5);
+  --light-shadow-light: rgba(211, 212, 213, 0.25);
 
   --dark: black;
   --dark-dark: rgb(0, 0, 0);
@@ -58,6 +58,74 @@
   --dark-shadow-light: rgba(74, 75, 75, 0.25);
 
   --link-color: rgb(13, 110, 253);
-  --link-color-hover: rgb(10,88,202);
-  --link-shadow: rgba(13,110,253,0.25);
+  --link-color-hover: rgb(10, 88, 202);
+  --link-shadow: rgba(13, 110, 253, 0.25);
+
+  --bs-body-bg: #fff;
+}
+
+[data-high-contrast] {
+  --font-family-trebuchet-ms: "Trebuchet MS", sans-serif;
+  --font-family-verdana: Verdana, sans-serif;
+  --font-family-arial-sans-serif: Arial, sans-serif;
+  --font-family-tahoma-sans-seirf: Tahoma, sans-serif;
+  --font-family-times-new-roman-serif: "Times New Roman", serif;
+  --font-family-georgia-serif: Georgia, serif;
+  --font-family-garamond-serif: Garamond, serif;
+  --font-family-courier-new-monospace: "Courier New", monospace;
+  --font-family-brush-script: "Brush Script MT", cursive;
+
+  --white: white;
+  --black: black;
+
+  --primary: rgb(13, 110, 253);
+  --primary-dark: rgb(11, 94, 215);
+  --primary-shadow: rgba(49, 132, 253, 0.5);
+  --primary-shadow-light: rgba(49, 132, 253, 0.25);
+
+  --secondary: rgb(108, 117, 125);
+  --secondary-dark: rgb(92, 99, 106);
+  --secondary-shadow: rgba(130, 138, 145, 0.5);
+  --secondary-shadow-light: rgba(130, 138, 145, 0.25);
+
+  --success: rgb(25, 135, 84);
+  --success-border: rgb(25, 135, 84);
+  --success-dark: rgb(21, 115, 71);
+  --success-shadow: rgba(60, 153, 110, 0.5);
+  --success-shadow-light: rgba(60, 153, 110, 0.25);
+
+  --danger: rgb(220, 53, 69);
+  --danger-dark: rgb(187, 45, 59);
+  --danger-shadow: rgba(225, 83, 97, 0.5);
+  --danger-shadow-light: rgba(225, 83, 97, 0.25);
+
+  --warning: rgb(255, 193, 7);
+  --warning-dark: rgb(255, 202, 44);
+  --warning-shadow: rgba(217, 164, 6, 0.5);
+  --warning-shadow-light: rgba(217, 164, 6, 0.25);
+
+  --info: rgb(13, 202, 240);
+  --info-dark: rgb(49, 210, 242);
+  --info-shadow: rgba(11, 172, 204, 0.5);
+  --info-shadow-light: rgba(11, 172, 204, 0.25);
+
+  --dark: black;
+  --dark-shadow: rgba(60, 153, 110, 0.5);
+  --dark-shadow-light: rgba(60, 153, 110, 0.25);
+
+  --light: rgb(248, 249, 250);
+  --light-dark: rgb(249, 250, 251);
+  --light-shadow: rgba(211, 212, 213, 0.5);
+  --light-shadow-light: rgba(211, 212, 213, 0.25);
+
+  --dark: black;
+  --dark-dark: rgb(0, 0, 0);
+  --dark-shadow: rgba(53, 53, 53, 0.5);
+  --dark-shadow-light: rgba(74, 75, 75, 0.25);
+
+  --link-color: rgb(13, 110, 253);
+  --link-color-hover: rgb(10, 88, 202);
+  --link-shadow: rgba(13, 110, 253, 0.25);
+
+  --bs-body-bg: #212529;
 }
