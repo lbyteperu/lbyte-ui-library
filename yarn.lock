@@ -2406,7 +2406,7 @@
     "@storybook/preview-api" "7.0.15"
     "@storybook/types" "7.0.15"
 
-"@storybook/addons@^7.0.0":
+"@storybook/addons@^7.0.0", "@storybook/addons@^7.3.2":
   version "7.3.2"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-7.3.2.tgz#5e78757e67a414e4ae444cda5d7f39ceff6e12f7"
   integrity sha512-qYwHniTJzfR7jKh5juYCjU9ukG7l1YAAt7BpnouItgRutxU/+UoC2iAFooQW+i74SxDoovqnEp9TkG7TAFOLxQ==

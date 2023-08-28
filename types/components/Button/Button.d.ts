@@ -1,26 +1,18 @@
-import React, { ReactNode } from "react";
-export type ButtonStyleColor = "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark" | "link";
-export type ButtonType = "button" | "submit" | "reset";
-export type ButtonSize = "small" | "medium" | "large";
-export type ButtonProps = {
-    id?: string;
-    anchor?: boolean;
-    autoFocus?: boolean;
+import React, { ReactNode, ButtonHTMLAttributes } from "react";
+export type ButtonColor = "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark" | "link";
+type ButtonProps = {
     children?: ReactNode;
-    circled?: boolean;
-    dataFsExclude?: boolean;
-    disabled?: boolean;
-    quiet?: boolean;
-    filled?: boolean;
-    inverted?: boolean;
-    type?: ButtonType;
-    "aria-haspopup"?: boolean;
-    styleColor?: ButtonStyleColor;
+    value?: string;
+    outline?: boolean;
+    color: ButtonColor;
     size?: ButtonSize;
     wrap?: boolean;
+    quiet?: boolean;
 };
+export type ButtonHTMLAttributesProps = ButtonHTMLAttributes<HTMLElement> & ButtonProps;
+export type ButtonSize = "small" | "medium" | "large";
 /**
  * Default button
  */
-declare const Button: ({ children, styleColor, size, wrap }: ButtonProps) => React.JSX.Element;
+declare const Button: ({ children, color, size, wrap, outline, quiet, onClick, }: ButtonHTMLAttributesProps) => React.JSX.Element;
 export default Button;

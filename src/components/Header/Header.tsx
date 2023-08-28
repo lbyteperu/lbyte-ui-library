@@ -32,7 +32,7 @@ const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => {
         <Drawer
           open={openMenu}
           setOpen={setOpenMenu}
-          appearFrom="left"
+          appear="fromLeft"
           mountOnEnter
           unmountOnExit
         />

@@ -58,7 +58,6 @@ const Lbyte = ({ size, width, height }: IconSVGAttributes) => {
               xmlSpace="preserve"
               style={{
                 lineHeight: "1.45",
-                InkscapeFontSpecification: "'American Typewriter'",
                 whiteSpace: "pre",
               }}
             >
