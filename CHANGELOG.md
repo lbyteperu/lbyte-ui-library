@@ -1,3 +1,17 @@
+# v1.0.14 (Sun Aug 27 2023)
+
+#### 🐛 Bug Fix
+
+- component updates [#11](https://github.com/lbyteperu/lbyte-ui-library/pull/11) ([@rubenpazch](https://github.com/rubenpazch))
+- add drawer [#10](https://github.com/lbyteperu/lbyte-ui-library/pull/10) ([@rubenpazch](https://github.com/rubenpazch))
+- new circle icon [#9](https://github.com/lbyteperu/lbyte-ui-library/pull/9) ([@rubenpazch](https://github.com/rubenpazch))
+
+#### Authors: 1
+
+- Ruben Paz Chuspe ([@rubenpazch](https://github.com/rubenpazch))
+
+---
+
 # v1.0.13 (Tue May 30 2023)
 
 #### ⚠️ Pushed to `main`
