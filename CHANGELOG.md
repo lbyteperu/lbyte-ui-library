@@ -1,3 +1,15 @@
+# v1.0.17 (Sun Aug 27 2023)
+
+#### ⚠️ Pushed to `main`
+
+- add lbyte icon ([@rubenpazch](https://github.com/rubenpazch))
+
+#### Authors: 1
+
+- Ruben Paz Chuspe ([@rubenpazch](https://github.com/rubenpazch))
+
+---
+
 # v1.0.16 (Sun Aug 27 2023)
 
 #### ⚠️ Pushed to `main`
