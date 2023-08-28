@@ -1,1 +1,1 @@
-export { default as Lbyte} from './Lbyte'
+export { default as Lbyte } from "./Lbyte";
