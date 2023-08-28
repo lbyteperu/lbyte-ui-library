@@ -1,3 +1,16 @@
+# v1.0.16 (Sun Aug 27 2023)
+
+#### ⚠️ Pushed to `main`
+
+- update types! ([@rubenpazch](https://github.com/rubenpazch))
+- readme ([@rubenpazch](https://github.com/rubenpazch))
+
+#### Authors: 1
+
+- Ruben Paz Chuspe ([@rubenpazch](https://github.com/rubenpazch))
+
+---
+
 # v1.0.14 (Sun Aug 27 2023)
 
 #### 🐛 Bug Fix
