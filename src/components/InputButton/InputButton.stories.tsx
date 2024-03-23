@@ -26,7 +26,7 @@ export const Default: Story = {
 };
 
 export const StyledButton: Story = {
-  render: ({ ...args }) => {
+  render: () => {
     return (
       <div>
         <InputButton
@@ -125,7 +125,7 @@ export const StyledButton: Story = {
 };
 
 export const InputButtonTypes: Story = {
-  render: ({ ...args }) => {
+  render: () => {
     return (
       <div>
         <InputButton
@@ -155,7 +155,7 @@ export const InputButtonTypes: Story = {
 };
 
 export const IconButtonOutlines: Story = {
-  render: ({ ...args }) => {
+  render: () => {
     return (
       <div>
         <InputButton
@@ -228,7 +228,7 @@ export const IconButtonOutlines: Story = {
 };
 
 export const IconButtonSizes: Story = {
-  render: ({ ...args }) => {
+  render: () => {
     return (
       <div>
         <InputButton

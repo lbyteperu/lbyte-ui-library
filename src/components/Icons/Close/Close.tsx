@@ -9,12 +9,12 @@ const Close = ({ size, width, height }: IconSVGAttributes) => {
     size === "small"
       ? "1rem"
       : size === "medium"
-      ? "2rem"
-      : size === "large"
-      ? "3rem"
-      : size === "x-large"
-      ? "4rem"
-      : "2rem";
+        ? "2rem"
+        : size === "large"
+          ? "3rem"
+          : size === "x-large"
+            ? "4rem"
+            : "2rem";
   const custom = width && height ? width : "2rem";
 
   return (

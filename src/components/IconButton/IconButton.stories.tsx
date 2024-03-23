@@ -18,7 +18,7 @@ export default {
 } satisfies Meta<typeof IconButton>;
 
 export const StyledIconButton: Story = {
-  render: ({ ...args }) => {
+  render: () => {
     return (
       <div>
         <IconButton
@@ -67,37 +67,36 @@ export const StyledIconButton: Story = {
 };
 
 export const SizeIconButton: Story = {
-  render: ({ ...args }) => {
+  render: () => {
     return (
       <div>
         <IconButton
           color="primary"
           size="small"
-          icon={<MenuGridIcon size='small' />}
+          icon={<MenuGridIcon size="small" />}
         />
         <IconButton
           color="secondary"
           size="medium"
-          icon={<MenuGridIcon size="medium"/>}
+          icon={<MenuGridIcon size="medium" />}
         />
         <IconButton
           color="success"
           size="large"
-          icon={<MenuGridIcon size="large"/>}
+          icon={<MenuGridIcon size="large" />}
         />
         <IconButton
           color="danger"
           size="x-large"
-          icon={<MenuGridIcon size="x-large"/>}
+          icon={<MenuGridIcon size="x-large" />}
         />
-        
       </div>
     );
   },
 };
 
 export const ButtonOutlines: Story = {
-  render: ({ ...args }) => {
+  render: () => {
     return (
       <div>
         <IconButton
@@ -154,7 +153,7 @@ export const ButtonOutlines: Story = {
 };
 
 export const ButtonQuiet: Story = {
-  render: ({ ...args }) => {
+  render: () => {
     return (
       <div>
         <IconButton

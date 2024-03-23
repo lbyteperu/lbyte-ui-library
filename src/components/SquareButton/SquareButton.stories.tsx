@@ -18,7 +18,7 @@ export default {
 } satisfies Meta<typeof SquareButton>;
 
 export const StyledSquareButton: Story = {
-  render: ({ ...args }) => {
+  render: () => {
     return (
       <div>
         <SquareButton
@@ -67,37 +67,36 @@ export const StyledSquareButton: Story = {
 };
 
 export const SizeSquareButton: Story = {
-  render: ({ ...args }) => {
+  render: () => {
     return (
       <div>
         <SquareButton
           color="primary"
           size="small"
-          icon={<MenuGridIcon size='small' />}
+          icon={<MenuGridIcon size="small" />}
         />
         <SquareButton
           color="secondary"
           size="medium"
-          icon={<MenuGridIcon size="medium"/>}
+          icon={<MenuGridIcon size="medium" />}
         />
         <SquareButton
           color="success"
           size="large"
-          icon={<MenuGridIcon size="large"/>}
+          icon={<MenuGridIcon size="large" />}
         />
         <SquareButton
           color="danger"
           size="x-large"
-          icon={<MenuGridIcon size="x-large"/>}
+          icon={<MenuGridIcon size="x-large" />}
         />
-        
       </div>
     );
   },
 };
 
 export const ButtonOutlines: Story = {
-  render: ({ ...args }) => {
+  render: () => {
     return (
       <div>
         <SquareButton
@@ -154,7 +153,7 @@ export const ButtonOutlines: Story = {
 };
 
 export const ButtonQuiet: Story = {
-  render: ({ ...args }) => {
+  render: () => {
     return (
       <div>
         <SquareButton

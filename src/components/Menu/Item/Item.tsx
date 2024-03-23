@@ -1,5 +1,5 @@
 import classList from "classnames";
-import React, { ReactNode } from "react";
+import React from "react";
 import styles from "./Item.module.css";
 
 export type ItemProps = {
@@ -9,7 +9,13 @@ export type ItemProps = {
 
 const Item = ({ content, rounded }: ItemProps) => {
   return (
-    <li className={classList(styles.li, rounded && styles.rounded, !rounded && styles.square)}>
+    <li
+      className={classList(
+        styles.li,
+        rounded && styles.rounded,
+        !rounded && styles.square,
+      )}
+    >
       <a href="#">{content}</a>
     </li>
   );

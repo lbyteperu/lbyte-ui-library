@@ -55,7 +55,6 @@ const TrasitionOptions: Record<string, CSSTransitionClassNames> = {
 };
 
 function DrawerMenuMobile({
-  children,
   open = false,
   unmountOnExit,
   mountOnEnter,
@@ -70,12 +69,12 @@ function DrawerMenuMobile({
     appearFrom === "left"
       ? fromLeft
       : appearFrom === "right"
-      ? fromRight
-      : appearFrom === "above"
-      ? fromAbove
-      : appearFrom === "below"
-      ? fromBelow
-      : "left";
+        ? fromRight
+        : appearFrom === "above"
+          ? fromAbove
+          : appearFrom === "below"
+            ? fromBelow
+            : "left";
 
   return ReactDOM.createPortal(
     <CSSTransition
@@ -98,7 +97,7 @@ function DrawerMenuMobile({
         <p>This alert message is being transitioned in and out of the DOM.</p>
       </div>
     </CSSTransition>,
-    portalContainer
+    portalContainer,
   );
 }
 

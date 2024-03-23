@@ -21,6 +21,6 @@ export const Default: Story = {
       <>
         <MenuMobile />
       </>
-    )
+    ),
   },
 };

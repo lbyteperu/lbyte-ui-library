@@ -8,7 +8,7 @@ export type MenuMobileProps = {
   children?: ReactNode;
 };
 
-const MenuMobile = ({ children }: MenuMobileProps) => {
+const MenuMobile = () => {
   const [open, setOpen] = useState(true);
   return (
     <menu className={styles.menu}>

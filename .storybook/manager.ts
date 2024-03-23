@@ -1,5 +1,5 @@
-import { addons } from '@storybook/addons'
-import { themes } from '@storybook/theming'
+import { addons } from "@storybook/addons";
+import { themes } from "@storybook/theming";
 
 /*const theme = create({
   base: 'light', // this will inherit the base properties of Storybooks'light theme
@@ -35,11 +35,11 @@ import { themes } from '@storybook/theming'
 
   // Brand assets
   brandTitle: 'Newline Storybook',
-  brandUrl: 'https://newline.co',
+  brandUrl: 'https://lbyte.pe',
   brandImage:
-    'https://d8dgeb1f3fxgw.cloudfront.net/static/img/logo/newline/newline-logo-longwise-solo-lightbg-gray.svg',
+    'https://lbyte.pe/lbytev1.png',
 })*/
 
 addons.setConfig({
   theme: themes.dark,
-})
+});

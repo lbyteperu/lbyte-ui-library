@@ -3,22 +3,25 @@ import styles from "./Header.module.css";
 import IconButton from "../IconButton";
 import { MenuGridIcon } from "../Icons";
 import Drawer from "../Drawer";
+
 export type User = {
   name: string;
 };
 
 export interface HeaderProps {
-  user?: User;
+  user: User;
   onLogin: () => void;
   onLogout: () => void;
   onCreateAccount: () => void;
   icon?: ReactElement;
 }
 
-const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => {
+const Header = ({ user }: HeaderProps) => {
+  const test = user;
+  console.log(test);
   const [openMenu, setOpenMenu] = useState(false);
   function handleIconButtonClick() {
-    setOpenMenu(!openMenu)
+    setOpenMenu(!openMenu);
   }
   return (
     <header className={styles.header}>

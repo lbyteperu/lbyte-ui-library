@@ -20,7 +20,6 @@ export const Default: Story = {
  */
 const DrawerWithState = ({ appear }: DrawerProps) => {
   const [open, setOpen] = useState(false);
-  const handleOnChange = () => {};
   return (
     <div
       style={{ display: "flex", flexFlow: "row", justifyContent: "flex-end" }}

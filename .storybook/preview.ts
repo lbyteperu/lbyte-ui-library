@@ -1,12 +1,10 @@
 import { Decorator } from "@storybook/react";
 import type { Preview } from "@storybook/react";
 import "../src/index.css";
-import { decorateWithContrastMode } from './decorators/contrast-mode'
-import './styles/preview-setup.css'
+import { decorateWithContrastMode } from "./decorators/contrast-mode";
+import "./styles/preview-setup.css";
 
-export const decorators = [
-  decorateWithContrastMode,
- ]
+export const decorators = [decorateWithContrastMode];
 
 const preview: Preview = {
   parameters: {

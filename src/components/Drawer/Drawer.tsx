@@ -55,7 +55,6 @@ const trasitionOptions: Record<string, CSSTransitionClassNames> = {
 };
 
 function Drawer({
-  children,
   open = false,
   unmountOnExit,
   mountOnEnter,
@@ -86,7 +85,7 @@ function Drawer({
         <p>This alert message is being transitioned in and out of the DOM.</p>
       </div>
     </CSSTransition>,
-    portalContainer
+    portalContainer,
   );
 }
 
