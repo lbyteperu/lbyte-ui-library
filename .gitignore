@@ -25,7 +25,5 @@ yarn-debug.log*
 yarn-error.log*
 /dist
 .env
-dist
-
-#storybook build directory
 storybook-static
+/types
