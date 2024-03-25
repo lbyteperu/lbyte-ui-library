@@ -1,28 +1,35 @@
 {
   "compilerOptions": {
-    "target": "ES5", // Specifies the JavaScript version to target when transpiling code.
-    "useDefineForClassFields": true, // Enables the use of 'define' for class fields.
-    "lib": ["ES2020", "DOM", "DOM.Iterable"], // Specifies the libraries available for the code.
-    "module": "ESNext", // Defines the module system to use for code generation.
-    "skipLibCheck": true, // Skips type checking of declaration files.
-
-    /* Bundler mode */
-    "moduleResolution": "bundler", // Specifies how modules are resolved when bundling.
-    "allowImportingTsExtensions": true, // Allows importing TypeScript files with extensions.
-    "resolveJsonModule": true, // Enables importing JSON modules.
-    "isolatedModules": true, // Ensures each file is treated as a separate module.
-    "noEmit": true, // Prevents TypeScript from emitting output files.
-    "jsx": "react", // Configures JSX support for React.
-
-    /* Linting */
-    "strict": true, // Enables strict type checking.
-    "noUnusedLocals": true, // Flags unused local variables.
-    "noUnusedParameters": true, // Flags unused function parameters.
-    "noFallthroughCasesInSwitch": true, // Requires handling all cases in a switch statement.
-    "declaration": true, // Generates declaration files for TypeScript.
+    "target": "ESNext", // "target": "es5",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "jsx": "react",
+    "module": "ESNext", // "module": "esnext",
+    "declaration": true,
+    "declarationDir": "dist", // "declarationDir": "build",
+    "sourceMap": true,
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "emitDeclarationOnly": true,
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types"
+    ],
   },
-  "include": ["src"], // Specifies the directory to include when searching for TypeScript files.
+  "include": [
+    "src/**/*",
+    "css-module.d.ts"
+  ],
   "exclude": [
-    "src/**/__docs__","src/**/__test__"
+    "src/**/__docs__",
+    "src/**/__test__"
   ]
 }
