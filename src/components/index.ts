@@ -4,4 +4,5 @@ export { default as Link } from "./Link";
 export { default as Header } from "./Header";
 export { default as DrawerMenuMobile } from "./DrawerMenuMobile";
 export { default as Page } from "./Page";
+export { default as TestComponent } from "./TestComponent";
 export { AddCircleIcon, MenuGridIcon, MenuIcon, LbyteIcon } from "./Icons";
