@@ -1,59 +1,53 @@
-import classList from "classnames";
-import React, { ReactNode, ButtonHTMLAttributes } from "react";
-import styles from "./Button.module.css";
+// components/button/button.tsx
+import React, { MouseEventHandler } from "react";
+import styled from "styled-components";
 
-export type ButtonColor =
-  | "primary"
-  | "secondary"
-  | "success"
-  | "danger"
-  | "warning"
-  | "info"
-  | "light"
-  | "dark"
-  | "link";
-
-type ButtonProps = {
-  children?: ReactNode;
-  value?: string;
-  outline?: boolean;
-  color: ButtonColor;
-  size?: ButtonSize;
-  wrap?: boolean;
-  quiet?: boolean;
+export type ButtonProps = {
+  text?: string;
+  primary?: boolean;
+  disabled?: boolean;
+  size?: "small" | "medium" | "large";
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 };
 
-export type ButtonHTMLAttributesProps = ButtonHTMLAttributes<HTMLElement> &
-  ButtonProps;
+const StyledButton = styled.button<ButtonProps>`
+  border: 0;
+  line-height: 1;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 700;
+  font-weight: bold;
+  border-radius: 10px;
+  display: inline-block;
+  color: ${(props) => (props.primary ? "#fff" : "#000")};
+  background-color: ${(props) => (props.primary ? "#FF5655" : "#f4c4c4")};
+  padding: ${(props) =>
+    props.size === "small"
+      ? "7px 25px 8px"
+      : props.size === "medium"
+        ? "9px 30px 11px"
+        : "14px 30px 16px"};
+`;
 
-export type ButtonSize = "small" | "medium" | "large";
-
-/**
- * Default button
- */
-const Button = ({
-  children,
-  color,
+const Button: React.FC<ButtonProps> = ({
   size,
-  wrap,
-  outline,
-  quiet,
+  primary,
+  disabled,
+  text,
   onClick,
-}: ButtonHTMLAttributesProps) => {
-  const buttonClassName = classList(
-    styles.base,
-    styles[`${color}`],
-    size && styles[`${size}`],
-    wrap && styles["wrap"],
-    outline && styles[`outline-${color}`],
-    outline && styles["outline"],
-    quiet && styles["quiet"]
-  );
-
+  ...props
+}) => {
   return (
-    <button className={buttonClassName} role="button" onClick={onClick}>
-      {children}
-    </button>
+    <StyledButton
+      type="button"
+      onClick={onClick}
+      primary={primary}
+      disabled={disabled}
+      size={size}
+      {...props}
+    >
+      {text}
+    </StyledButton>
   );
 };
 
