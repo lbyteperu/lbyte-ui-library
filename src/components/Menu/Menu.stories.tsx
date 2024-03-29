@@ -17,7 +17,7 @@ export default {
 
 export const Horizontal: Story = {
   args: {
-    items: ['item1', 'item2', 'item3']
+    items: ["item1", "item2", "item3"],
   },
 };
 
@@ -29,6 +29,6 @@ export const HorizontalWithChildren: Story = {
         <li>test2</li>
         <li>test3</li>
       </>
-    )
+    ),
   },
 };

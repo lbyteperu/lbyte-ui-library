@@ -44,7 +44,7 @@ const IconButton = ({
     styles[`${size}-wrapper`],
     outline && styles[`outline-${color}`],
     outline && styles["outline"],
-    quiet && styles["quiet"]
+    quiet && styles["quiet"],
   );
 
   return (

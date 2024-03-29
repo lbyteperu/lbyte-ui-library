@@ -47,7 +47,7 @@ const Button = ({
     wrap && styles["wrap"],
     outline && styles[`outline-${color}`],
     outline && styles["outline"],
-    quiet && styles["quiet"]
+    quiet && styles["quiet"],
   );
 
   return (

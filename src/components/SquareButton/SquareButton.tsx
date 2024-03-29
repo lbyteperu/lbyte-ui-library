@@ -24,8 +24,8 @@ export type SquareButtonProps = {
   className?: string;
 };
 
-export type SquareButtonHTMLAttributesProps = ButtonHTMLAttributes<HTMLElement> &
-  SquareButtonProps;
+export type SquareButtonHTMLAttributesProps =
+  ButtonHTMLAttributes<HTMLElement> & SquareButtonProps;
 
 /**
  * Default icon button
@@ -47,7 +47,7 @@ const SquareButton = ({
     outline && styles[`outline-${color}`],
     outline && styles["outline"],
     quiet && styles["quiet"],
-    className
+    className,
   );
 
   return (

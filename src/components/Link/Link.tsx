@@ -13,7 +13,7 @@ export type ButtonStyleColor =
   | "info"
   | "light"
   | "dark"
-  | "link"
+  | "link";
 
 export type LinkProps = {
   children?: ReactNode;
@@ -32,7 +32,7 @@ const Link = ({ children, href, size, outline, styleColor }: LinkProps) => {
     styles[`${styleColor}`],
     styles[`storybook-button--${size}`],
     outline && styles[`outline-${styleColor}`],
-    outline && styles["outline"]
+    outline && styles["outline"],
   );
 
   return (

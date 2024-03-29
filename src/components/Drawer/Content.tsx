@@ -1,11 +1,11 @@
 import React from "react";
-import styles from './Content.module.css'
+import styles from "./Content.module.css";
 
 export type ModalProps = {
   onClose: any;
 };
 
-const Content =({ onClose }: ModalProps) => {
+const Content = ({ onClose }: ModalProps) => {
   return (
     <div className={styles.content}>
       <div>
@@ -20,6 +20,6 @@ const Content =({ onClose }: ModalProps) => {
       </div>
     </div>
   );
-}
+};
 
 export default Content;

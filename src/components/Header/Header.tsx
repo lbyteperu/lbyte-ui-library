@@ -18,7 +18,7 @@ export interface HeaderProps {
 const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => {
   const [openMenu, setOpenMenu] = useState(false);
   function handleIconButtonClick() {
-    setOpenMenu(!openMenu)
+    setOpenMenu(!openMenu);
   }
   return (
     <header className={styles.header}>

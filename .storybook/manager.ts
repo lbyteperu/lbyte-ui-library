@@ -1,5 +1,5 @@
-import { addons } from '@storybook/addons'
-import { themes } from '@storybook/theming'
+import { addons } from "@storybook/addons";
+import { themes } from "@storybook/theming";
 
 /*const theme = create({
   base: 'light', // this will inherit the base properties of Storybooks'light theme
@@ -42,4 +42,4 @@ import { themes } from '@storybook/theming'
 
 addons.setConfig({
   theme: themes.dark,
-})
+});

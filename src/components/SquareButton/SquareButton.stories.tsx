@@ -73,24 +73,23 @@ export const SizeSquareButton: Story = {
         <SquareButton
           color="primary"
           size="small"
-          icon={<MenuGridIcon size='small' />}
+          icon={<MenuGridIcon size="small" />}
         />
         <SquareButton
           color="secondary"
           size="medium"
-          icon={<MenuGridIcon size="medium"/>}
+          icon={<MenuGridIcon size="medium" />}
         />
         <SquareButton
           color="success"
           size="large"
-          icon={<MenuGridIcon size="large"/>}
+          icon={<MenuGridIcon size="large" />}
         />
         <SquareButton
           color="danger"
           size="x-large"
-          icon={<MenuGridIcon size="x-large"/>}
+          icon={<MenuGridIcon size="x-large" />}
         />
-        
       </div>
     );
   },

@@ -9,7 +9,13 @@ export type ItemProps = {
 
 const Item = ({ content, rounded }: ItemProps) => {
   return (
-    <li className={classList(styles.li, rounded && styles.rounded, !rounded && styles.square)}>
+    <li
+      className={classList(
+        styles.li,
+        rounded && styles.rounded,
+        !rounded && styles.square,
+      )}
+    >
       <a href="#">{content}</a>
     </li>
   );

@@ -1,1 +1,1 @@
-export { default } from './SquareButton';
+export { default } from "./SquareButton";

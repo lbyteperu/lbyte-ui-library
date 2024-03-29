@@ -6,10 +6,15 @@ type Story = StoryObj<typeof Header>;
  * Button component
  */
 declare const _default: {
-    component: ({ user, onLogin, onLogout, onCreateAccount }: import("./Header").HeaderProps) => import("react").JSX.Element;
-    decorators: import("@storybook/preview-api/dist/storybook-channel-mock-a19cd233").M[];
-    tags: string[];
-    title: string;
+  component: ({
+    user,
+    onLogin,
+    onLogout,
+    onCreateAccount,
+  }: import("./Header").HeaderProps) => import("react").JSX.Element;
+  decorators: import("@storybook/preview-api/dist/storybook-channel-mock-a19cd233").M[];
+  tags: string[];
+  title: string;
 };
 export default _default;
 export declare const Basic: Story;

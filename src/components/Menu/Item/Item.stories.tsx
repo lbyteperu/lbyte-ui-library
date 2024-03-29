@@ -17,15 +17,21 @@ export default {
 
 export const Default: Story = {
   args: {
-    content: "testing"
+    content: "testing",
   },
 };
 
 export const Rounded: Story = {
   render: ({ ...args }) => {
     return (
-      <div style={{backgroundColor: 'rgb(232 232 232 / 63%)', width: '100', height: '20rem'}}>
-        <Item content="testtt" rounded/>
+      <div
+        style={{
+          backgroundColor: "rgb(232 232 232 / 63%)",
+          width: "100",
+          height: "20rem",
+        }}
+      >
+        <Item content="testtt" rounded />
       </div>
     );
   },
@@ -34,8 +40,14 @@ export const Rounded: Story = {
 export const Square: Story = {
   render: ({ ...args }) => {
     return (
-      <div style={{backgroundColor: 'rgb(232 232 232 / 63%)', width: '100', height: '20rem'}}>
-        <Item content="testtt"/>
+      <div
+        style={{
+          backgroundColor: "rgb(232 232 232 / 63%)",
+          width: "100",
+          height: "20rem",
+        }}
+      >
+        <Item content="testtt" />
       </div>
     );
   },

@@ -73,24 +73,23 @@ export const SizeIconButton: Story = {
         <IconButton
           color="primary"
           size="small"
-          icon={<MenuGridIcon size='small' />}
+          icon={<MenuGridIcon size="small" />}
         />
         <IconButton
           color="secondary"
           size="medium"
-          icon={<MenuGridIcon size="medium"/>}
+          icon={<MenuGridIcon size="medium" />}
         />
         <IconButton
           color="success"
           size="large"
-          icon={<MenuGridIcon size="large"/>}
+          icon={<MenuGridIcon size="large" />}
         />
         <IconButton
           color="danger"
           size="x-large"
-          icon={<MenuGridIcon size="x-large"/>}
+          icon={<MenuGridIcon size="x-large" />}
         />
-        
       </div>
     );
   },

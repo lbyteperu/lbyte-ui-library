@@ -20,7 +20,7 @@ export const Default: Story = {
     onClick: () => {
       console.log("testing");
     },
-    children:"default"
+    children: "default",
   },
 };
 
@@ -33,7 +33,9 @@ export const StyledButton: Story = {
           size="medium"
           children="Primary"
           type="button"
-          onClick={()=> {console.log('testing')}}
+          onClick={() => {
+            console.log("testing");
+          }}
         />
         <Button
           color="secondary"
@@ -47,42 +49,17 @@ export const StyledButton: Story = {
           children="Success"
           type="button"
         />
-        <Button
-          color="danger"
-          size="medium"
-          children="Danger"
-          type="button"
-        />
+        <Button color="danger" size="medium" children="Danger" type="button" />
         <Button
           color="warning"
           size="medium"
           children="Warning"
           type="button"
         />
-        <Button
-          color="info"
-          size="medium"
-          children="Info"
-          type="button"
-        />
-        <Button
-          color="light"
-          size="medium"
-          children="Light"
-          type="button"
-        />
-        <Button
-          color="dark"
-          size="medium"
-          children="Dark"
-          type="button"
-        />
-        <Button
-          color="link"
-          size="medium"
-          children="Link"
-          type="button"
-        />
+        <Button color="info" size="medium" children="Info" type="button" />
+        <Button color="light" size="medium" children="Light" type="button" />
+        <Button color="dark" size="medium" children="Dark" type="button" />
+        <Button color="link" size="medium" children="Link" type="button" />
       </div>
     );
   },
@@ -92,18 +69,8 @@ export const ButtonTags: Story = {
   render: ({ ...args }) => {
     return (
       <div>
-        <Button
-          color="primary"
-          size="medium"
-          children="Button"
-          type="button"
-        />
-        <Button
-          color="primary"
-          size="medium"
-          type="button"
-          children="link"
-        />
+        <Button color="primary" size="medium" children="Button" type="button" />
+        <Button color="primary" size="medium" type="button" children="link" />
       </div>
     );
   },
@@ -185,24 +152,14 @@ export const ButtonSizes: Story = {
   render: ({ ...args }) => {
     return (
       <div>
-        <Button
-          color="primary"
-          size="small"
-          children="Small"
-          type="button"
-        />
+        <Button color="primary" size="small" children="Small" type="button" />
         <Button
           color="secondary"
           size="medium"
           children="Medium"
           type="button"
         />
-        <Button
-          color="success"
-          size="large"
-          children="Large"
-          type="button"
-        />
+        <Button color="success" size="large" children="Large" type="button" />
       </div>
     );
   },
