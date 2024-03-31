@@ -8,7 +8,7 @@ const config: StorybookConfig = {
     "@storybook/addon-a11y",
     "storybook-dark-mode",
     "@storybook/addon-mdx-gfm",
-    "@storybook/addon-webpack5-compiler-babel"
+    "@storybook/addon-webpack5-compiler-babel",
   ],
   framework: {
     name: "@storybook/react-webpack5",

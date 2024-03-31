@@ -12,7 +12,8 @@
     "build-storybook": "storybook build",
     "release": "auto shipit --base-branch=main",
     "format": "prettier --write --parser typescript '**/*.{ts,tsx}'",
-    "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore --fix"
+    "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore --fix",
+    "build-tsc": "tsc"
   },
   "devDependencies": {
     "@babel/core": "^7.21.8",
@@ -61,7 +62,7 @@
     "react-router-dom": "^6.11.2",
     "react-transition-group": "^4.4.5",
     "rollup": "^3.23.0",
-    "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^8.0.5",

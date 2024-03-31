@@ -4,11 +4,10 @@ import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
 import terser from "@rollup/plugin-terser";
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-import autoprefixer from 'autoprefixer'
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import autoprefixer from "autoprefixer";
 
 import packageJson from "./package.json" assert { type: "json" };
-
 
 export default [
   {
@@ -18,6 +17,7 @@ export default [
         file: packageJson.main,
         format: "cjs",
         sourcemap: true,
+        name: "lbyte-ui-library",
       },
       {
         file: packageJson.module,

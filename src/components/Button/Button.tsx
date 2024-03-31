@@ -1,32 +1,10 @@
 import classList from "classnames";
-import React, { ReactNode, ButtonHTMLAttributes } from "react";
+import React, { ButtonHTMLAttributes } from "react";
+import { ButtonProps } from "./Button.types";
 import styles from "./Button.module.css";
-
-export type ButtonColor =
-  | "primary"
-  | "secondary"
-  | "success"
-  | "danger"
-  | "warning"
-  | "info"
-  | "light"
-  | "dark"
-  | "link";
-
-type ButtonProps = {
-  children?: ReactNode;
-  value?: string;
-  outline?: boolean;
-  color: ButtonColor;
-  size?: ButtonSize;
-  wrap?: boolean;
-  quiet?: boolean;
-};
 
 export type ButtonHTMLAttributesProps = ButtonHTMLAttributes<HTMLElement> &
   ButtonProps;
-
-export type ButtonSize = "small" | "medium" | "large";
 
 /**
  * Default button
