@@ -1,4 +1,4 @@
-import React, { SVGAttributes } from "react";
+import React from "react";
 import styles from "../index.module.css";
 import classList from "classnames";
 import { SVGAttributesProps } from "../shared";

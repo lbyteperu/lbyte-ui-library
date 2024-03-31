@@ -22,7 +22,7 @@ export const Default: Story = {
 };
 
 export const Rounded: Story = {
-  render: ({ ...args }) => {
+  render: () => {
     return (
       <div
         style={{
@@ -38,7 +38,7 @@ export const Rounded: Story = {
 };
 
 export const Square: Story = {
-  render: ({ ...args }) => {
+  render: () => {
     return (
       <div
         style={{

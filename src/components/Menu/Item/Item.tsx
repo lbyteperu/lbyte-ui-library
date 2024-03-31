@@ -1,5 +1,5 @@
 import classList from "classnames";
-import React, { ReactNode } from "react";
+import React from "react";
 import styles from "./Item.module.css";
 
 export type ItemProps = {

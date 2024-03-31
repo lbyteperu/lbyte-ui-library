@@ -25,7 +25,7 @@ export const Default: Story = {
 };
 
 export const CustomSizes: Story = {
-  render: ({ ...args }) => {
+  render: () => {
     return (
       <div>
         <MenuGrid width={8} height={8} />
@@ -40,7 +40,7 @@ export const CustomSizes: Story = {
 };
 
 export const FixedSizes: Story = {
-  render: ({ ...args }) => {
+  render: () => {
     return (
       <div>
         <MenuGrid size="small" />

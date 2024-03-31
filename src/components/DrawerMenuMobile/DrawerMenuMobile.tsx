@@ -55,7 +55,6 @@ const TrasitionOptions: Record<string, CSSTransitionClassNames> = {
 };
 
 function DrawerMenuMobile({
-  children,
   open = false,
   unmountOnExit,
   mountOnEnter,

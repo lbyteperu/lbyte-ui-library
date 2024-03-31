@@ -17,7 +17,7 @@ export default {
 } satisfies Meta<typeof AddCircle>;
 
 export const AddCircleIconSizes: Story = {
-  render: ({ ...args }) => {
+  render: () => {
     return (
       <div>
         <AddCircle width={8} height={8} />

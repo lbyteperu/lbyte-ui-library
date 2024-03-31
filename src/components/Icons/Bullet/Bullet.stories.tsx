@@ -1,20 +1,20 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { withRouter } from "storybook-addon-react-router-v6";
 
-import Close from "./Close";
+import Bullet from "./Bullet";
 import React from "react";
 
-type Story = StoryObj<typeof Close>;
+type Story = StoryObj<typeof Bullet>;
 
 /**
  * Button component
  */
 export default {
-  component: Close,
+  component: Bullet,
   decorators: [withRouter],
   tags: ["autodocs"],
-  title: "components/Icons/Close",
-} satisfies Meta<typeof Close>;
+  title: "components/Icons/Bullet",
+} satisfies Meta<typeof Bullet>;
 
 export const Default: Story = {
   args: {
@@ -28,12 +28,12 @@ export const CustomSizes: Story = {
   render: () => {
     return (
       <div>
-        <Close width={8} height={8} />
-        <Close width={16} height={16} />
-        <Close width={24} height={24} />
-        <Close width={32} height={32} />
-        <Close width={40} height={40} />
-        <Close width={48} height={48} />
+        <Bullet width={8} height={8} />
+        <Bullet width={16} height={16} />
+        <Bullet width={24} height={24} />
+        <Bullet width={32} height={32} />
+        <Bullet width={40} height={40} />
+        <Bullet width={48} height={48} />
       </div>
     );
   },
@@ -43,10 +43,10 @@ export const FixedSizes: Story = {
   render: () => {
     return (
       <div>
-        <Close size="small" />
-        <Close size="medium" />
-        <Close size="large" />
-        <Close size="x-large" />
+        <Bullet size="small" />
+        <Bullet size="medium" />
+        <Bullet size="large" />
+        <Bullet size="x-large" />
       </div>
     );
   },

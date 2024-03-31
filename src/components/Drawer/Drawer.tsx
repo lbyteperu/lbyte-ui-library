@@ -55,7 +55,6 @@ const trasitionOptions: Record<string, CSSTransitionClassNames> = {
 };
 
 function Drawer({
-  children,
   open = false,
   unmountOnExit,
   mountOnEnter,

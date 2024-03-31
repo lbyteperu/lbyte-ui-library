@@ -17,7 +17,7 @@ export default {
 } satisfies Meta<typeof Menu>;
 
 export const MenuIconSizes: Story = {
-  render: ({ ...args }) => {
+  render: () => {
     return (
       <div>
         <Menu width={8} height={8} />

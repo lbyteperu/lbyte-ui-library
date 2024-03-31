@@ -1,4 +1,3 @@
-import classList from "classnames";
 import React, { ReactNode } from "react";
 import styles from "./Menu.module.css";
 
@@ -9,8 +8,8 @@ export type MenuProps = {
 
 const Menu = ({ items, children }: MenuProps) => {
   const renderItems = (items: string[]) => {
-    return items.map((item) => (
-      <li>
+    return items.map((item, i) => (
+      <li key={i}>
         <a href="#">{item}</a>
       </li>
     ));
