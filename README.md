@@ -5,3 +5,8 @@
   -registry=https://registry.npmjs.org/
   -@lbyteperu:registry=https://npm.pkg.github.com/
   -//npm.pkg.github.com/:_authToken=ghp_XXXXXXXXXXXXXXXXXXXXXXX
+
+# local setup 
+run the following command to set the correct version of nodejs
+
+``` nvm use ```
