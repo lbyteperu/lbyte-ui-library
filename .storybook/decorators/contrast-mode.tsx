@@ -8,7 +8,6 @@ import React, { useEffect } from "react";
 // See: https://github.com/hipstersmoothie/storybook-dark-mode/issues/168#issuecomment-970757299
 export const decorateWithContrastMode: Decorator = (Story) => {
   const isDarkMode = useDarkMode();
-  console.log({ isDarkMode });
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.setAttribute("data-high-contrast", "");

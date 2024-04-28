@@ -1,8 +1,8 @@
+import React, { TextareaHTMLAttributes } from "react";
+import styles from "./TextArea.module.css";
 import classList from "classnames";
-import React, { InputHTMLAttributes } from "react";
-import styles from "./TextInput.module.css";
 
-export type TextInputColor =
+export type TextAreaColor =
   | "primary"
   | "secondary"
   | "success"
@@ -13,44 +13,43 @@ export type TextInputColor =
   | "dark"
   | "link";
 
-export type TextInputSize = "small" | "medium" | "large";
+export type TextAreaSize = "small" | "medium" | "large";
 
-interface TextInputProps {
-  color?: TextInputColor;
+export type TextAreaProps = {
+  color?: TextAreaColor;
   placeholder?: string;
-  fontSize?: TextInputSize;
-  onClick?: () => void;
-  value: string;
-}
+  size?: TextAreaSize;
+};
 
-export type InputHTMLAttributesProps = InputHTMLAttributes<HTMLElement> &
-  TextInputProps;
+export type TextareaHTMLAttributesProps = TextareaHTMLAttributes<HTMLElement> &
+  TextAreaProps;
 
-const TextInput = ({
+const TextAreaInput = ({
   color,
-  fontSize,
+  size,
   value,
   onClick,
   placeholder,
-}: InputHTMLAttributesProps) => {
+  id,
+}: TextareaHTMLAttributesProps) => {
   const inputClassName = classList(
     styles.base,
     styles[`${color}`],
-    styles[`${fontSize}`],
+    styles[`${size}`],
   );
   const placeHolderDefault = "type something here...";
   const placeHolderInput = placeholder ? placeholder : placeHolderDefault;
 
   return (
-    <input
-      type="text"
+    <textarea
       role="textbox"
       className={inputClassName}
       defaultValue={value}
       onClick={onClick}
+      id={id}
       placeholder={placeHolderInput}
     />
   );
 };
 
-export default TextInput;
+export default TextAreaInput;

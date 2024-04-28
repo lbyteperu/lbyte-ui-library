@@ -7,28 +7,7 @@ exports[`Button renders with classname primary: <button class="base primary" rol
 />
 `;
 
-exports[`Button renders with outline: <button class="base secondary outline" role="button" /> 1`] = `
-<button
-  class="base secondary outline-secondary outline"
-  role="button"
-/>
-`;
-
 exports[`Button renders with outline: <button class="base secondary outline-secondary outline" role="button" /> 1`] = `
-<button
-  class="base secondary outline-secondary outline"
-  role="button"
-/>
-`;
-
-exports[`Button renders with outline: <button class="base secondary wrap" role="button" /> 1`] = `
-<button
-  class="base secondary outline-secondary outline"
-  role="button"
-/>
-`;
-
-exports[`Button renders with quiet: <button class="base secondary outline" role="button" /> 1`] = `
 <button
   class="base secondary outline-secondary outline"
   role="button"
@@ -43,13 +22,6 @@ exports[`Button renders with quiet: <button class="base secondary quiet" role="b
 `;
 
 exports[`Button renders with size: <button class="base secondary small" role="button" /> 1`] = `
-<button
-  class="base secondary small"
-  role="button"
-/>
-`;
-
-exports[`Button renders with wrap: <button class="base secondary small" role="button" /> 1`] = `
 <button
   class="base secondary small"
   role="button"
