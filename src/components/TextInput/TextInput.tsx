@@ -18,9 +18,10 @@ export type TextInputSize = "small" | "medium" | "large";
 interface TextInputProps {
   color?: TextInputColor;
   placeholder?: string;
-  fontSize?: TextInputSize;
+  formSize?: TextInputSize;
   onClick?: () => void;
   value: string;
+  labelText?: string;
 }
 
 export type InputHTMLAttributesProps = InputHTMLAttributes<HTMLElement> &
@@ -28,28 +29,35 @@ export type InputHTMLAttributesProps = InputHTMLAttributes<HTMLElement> &
 
 const TextInput = ({
   color,
-  fontSize,
+  formSize,
   value,
   onClick,
   placeholder,
+  labelText,
 }: InputHTMLAttributesProps) => {
   const inputClassName = classList(
     styles.base,
     styles[`${color}`],
-    styles[`${fontSize}`],
+    styles[`${formSize}`],
   );
   const placeHolderDefault = "type something here...";
+  const labelTextDefault = "input field";
   const placeHolderInput = placeholder ? placeholder : placeHolderDefault;
+  const labelTextInput = labelText ? labelText : labelTextDefault;
 
   return (
-    <input
-      type="text"
-      role="textbox"
-      className={inputClassName}
-      defaultValue={value}
-      onClick={onClick}
-      placeholder={placeHolderInput}
-    />
+    <>
+      <label className={styles.labelForm}>{labelTextInput}</label>
+      <input
+        type="text"
+        role="textbox"
+        className={inputClassName}
+        defaultValue={value}
+        onClick={onClick}
+        placeholder={placeHolderInput}
+      />
+      <label className={styles.descriptionForm}>{labelTextInput}</label>
+    </>
   );
 };
 
