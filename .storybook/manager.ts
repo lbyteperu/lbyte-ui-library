@@ -40,6 +40,6 @@ import { themes } from "@storybook/theming";
     'https://d8dgeb1f3fxgw.cloudfront.net/static/img/logo/newline/newline-logo-longwise-solo-lightbg-gray.svg',
 })*/
 
-addons.setConfig({
-  theme: themes.dark,
-});
+//addons.setConfig({
+//  theme: themes.dark,
+//});
