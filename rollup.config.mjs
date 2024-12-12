@@ -29,7 +29,11 @@ export default [
       peerDepsExternal(),
       resolve(),
       commonjs(),
-      typescript({ tsconfig: "./tsconfig.json" }),
+      typescript({ 
+        tsconfig: './tsconfig.json',
+        declaration: true,
+        declarationDir: 'dist',
+       }),
       postcss({
         extract: false,
         writeDefinitions: true,
