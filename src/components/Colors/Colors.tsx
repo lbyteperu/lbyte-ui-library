@@ -5,17 +5,28 @@ import { ColorsProps } from "./Colors.types";
 
 export type ColorsHTMLProps = ColorsProps;
 
-const Colors = ({ color, tone, children, title, opacity }: ColorsHTMLProps) => {
+const Colors = ({
+  color,
+  tone,
+  children,
+  title,
+  opacity,
+  shadow,
+}: ColorsHTMLProps) => {
+  const baseClassName = classList(
+    styles.base,
+    shadow && styles[`shadow-${shadow}`],
+  );
   const colorsClassName = classList(
     styles.colorCode,
     color && styles[`${color}`],
-    tone && styles[`primary-${tone}`],
+    tone && styles[`${color}-${tone}`],
     opacity && styles[`${opacity}`],
     opacity && styles[`opacity-${opacity}`],
   );
   return (
     <>
-      <div className={styles.base}>
+      <div className={baseClassName}>
         <div className={colorsClassName}>{children}</div>
         <div className={styles.content}>{title}</div>
       </div>

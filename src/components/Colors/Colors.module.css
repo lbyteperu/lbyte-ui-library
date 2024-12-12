@@ -80,8 +80,47 @@
 }
 
 .secondary {
-  background-color: var(--ds-secondary-color-100);
+  background-color: var(--ds-secondary-color-500);
+  color: var(--white);
 }
+.secondary-lightest {
+  background-color: var(--ds-secondary-color-100);
+  color: var(--ds-secondary-color-500);
+}
+.secondary-lighter {
+  background-color: var(--ds-secondary-color-200);
+  color: var(--ds-secondary-color-500);
+}
+.secondary-light {
+  background-color: var(--ds-secondary-color-300);
+  color: var(--white);
+}
+.secondary-regular-light {
+  background-color: var(--ds-secondary-color-400);
+  color: var(--white);
+}
+.secondary-regular {
+  background-color: var(--ds-secondary-color-500);
+  color: var(--white);
+}
+.secondary-regular-dark {
+  background-color: var(--ds-secondary-color-600);
+  color: var(--white);
+}
+.secondary-dark {
+  background-color: var(--ds-secondary-color-700);
+  color: var(--white);
+}
+.secondary-darker {
+  background-color: var(--ds-secondary-color-800);
+  color: var(--white);
+}
+.secondary-darkest {
+  background-color: var(--ds-secondary-color-900);
+  color: var(--white);
+}
+
+
 
 .opacity-lighter {
   background-color: var(--ds-primary-opacity-lighter);
@@ -106,4 +145,17 @@
 .opacity-darker {
   background-color: var(--ds-primary-opacity-darker);
   color: var(--ds-primary-color-500);
+}
+
+/* offset-x | offset-y | blur-radius | spread-radius | color */
+.shadow-small {
+  box-shadow: var(--ds-primary-shadow-small);
+}
+
+.shadow-medium {
+  box-shadow: var(--ds-primary-shadow-medium);
+}
+
+.shadow-large {
+  box-shadow: var(--ds-primary-shadow-large);
 }

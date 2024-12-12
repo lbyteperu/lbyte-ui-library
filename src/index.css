@@ -392,6 +392,10 @@
   --ds-primary-opacity-dark: #7367f032;
   --ds-primary-opacity-darker: #7367f038;
 
+  --ds-primary-shadow-small: 0 0.125rem 0.375rem 0 var(--ds-primary-color-500);
+  --ds-primary-shadow-medium: 0 0.25rem 1rem 0 var(--ds-primary-color-500);
+  --ds-primary-shadow-large: 0 0.375rem 1.25rem 0 var(--ds-primary-color-500);
+
   --ds-secondary-color-100: #e6e6e9;
   --ds-secondary-color-200: #cccdd3;
   --ds-secondary-color-300: #b3b5bc;
@@ -401,6 +405,17 @@
   --ds-secondary-color-700: #6d6f7a;
   --ds-secondary-color-800: #666973;
   --ds-secondary-color-900: #60626c;
+
+  --ds-secondary-opacity-lighter: #80839008;
+  --ds-secondary-opacity-light: #80839016;
+  --ds-secondary-opacity-main: #80839024;
+  --ds-secondary-opacity-dark: #80839032;
+  --ds-secondary-opacity-darker: #80839038;
+
+  --ds-secondary-shadow-small: 0 0.125rem 0.375rem 0 var(--ds-secondary-color-500);
+  --ds-secondary-shadow-medium: 0 0.25rem 1rem 0 var(--ds-secondary-color-500);
+  --ds-secondary-shadow-large: 0 0.375rem 1.25rem 0 var(--ds-secondary-color-500);
+
 
   [data-high-contrast] {
     --font-family-trebuchet-ms: "Trebuchet MS", sans-serif;

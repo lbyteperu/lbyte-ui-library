@@ -20,6 +20,7 @@ export interface ColorsProps {
     | "darker"
     | "darkest";
   opacity?: "lighter" | "light" | "main" | "dark" | "darker";
+  shadow?: "small" | "medium" | "large";
   children?: ReactNode;
   title: string;
 }
