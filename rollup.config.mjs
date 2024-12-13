@@ -1,17 +1,19 @@
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
-import typescript from "@rollup/plugin-typescript";
-import dts from "rollup-plugin-dts";
+import typescript from "rollup-plugin-typescript2";
 import postcss from "rollup-plugin-postcss";
+import dts from "rollup-plugin-dts";
 import terser from "@rollup/plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import autoprefixer from "autoprefixer";
-
 import packageJson from "./package.json" assert { type: "json" };
+import { sizeSnapshot } from "rollup-plugin-size-snapshot";
+import image from "@rollup/plugin-image";
 
 export default [
   {
     input: "src/index.ts",
+    external: [...Object.keys(packageJson.devDependencies)],
     output: [
       {
         file: packageJson.main,
@@ -29,11 +31,11 @@ export default [
       peerDepsExternal(),
       resolve(),
       commonjs(),
-      typescript({ 
-        tsconfig: './tsconfig.json',
+      typescript({
+        tsconfig: "./tsconfig.json",
         declaration: true,
-        declarationDir: 'dist',
-       }),
+        declarationDir: "dist",
+      }),
       postcss({
         extract: false,
         writeDefinitions: true,
@@ -41,11 +43,16 @@ export default [
         namedExports: true,
         plugins: [autoprefixer()],
       }),
+      image(),
+      sizeSnapshot(),
       terser(),
     ],
+    watch: {
+      clearScreen: false,
+    },
   },
   {
-    input: "dist/esm/index.d.ts",
+    input: "dist/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts()],
     external: [/\.css$/],

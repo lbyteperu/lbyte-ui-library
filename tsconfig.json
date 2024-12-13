@@ -15,22 +15,15 @@
     "rootDir": "src",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "emitDeclarationOnly": true,
-    "plugins": [
-      {
-        "name": "typescript-plugin-css-modules"
-      }
-    ],
-    "typeRoots": [
-      "./node_modules/@types",
-      "./src/types",
-      "./dist/components"
-    ],
+    "allowJs": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "resolveJsonModule": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noEmit": true,
+    "typeRoots": ["./node_modules/@types", "./src/types", "./dist/components"]
   },
-  "include": [
-    "src/**/*",
-    "css-module.d.ts"
-  ],
+  "include": ["src/**/*", "css-module.d.ts"],
   "exclude": [
     "node_modules",
     "build",
