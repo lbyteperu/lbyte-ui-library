@@ -1,5 +1,5 @@
 {
-  "name": "@lbytenpmuser/lbyte-ui-library",
+  "name": "@lbyteperu/lbyte-ui-library",
   "version": "1.0.20",
   "description": "L byte ui component for react",
   "repository": "https://github.com/lbyteperu/lbyte-ui-library.git",
@@ -93,7 +93,7 @@
   ],
   "types": "dist/index.d.ts",
   "publishConfig": {
-    "registry": "https://npmjs.com/org/lbytenpmuser"
+    "registry": "https://npmjs.com/org/lbyteperu"
   },
   "dependencies": {
     "@storybook/test": "^8.4.7",
