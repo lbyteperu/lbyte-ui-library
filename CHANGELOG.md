@@ -35,6 +35,43 @@
 
 ---
 
+# v1.0.18 (Sat Dec 14 2024)
+
+#### 🐛 Bug Fix
+
+- Testing [#18](https://github.com/lbyteperu/lbyte-ui-library/pull/18) ([@rubenpazc](https://github.com/rubenpazc))
+
+#### ⚠️ Pushed to `main`
+
+- new org ([@rubenpazc](https://github.com/rubenpazc))
+- 1.0.20 ([@rubenpazc](https://github.com/rubenpazc))
+- new version ([@rubenpazc](https://github.com/rubenpazc))
+- setupwqi ([@rubenpazc](https://github.com/rubenpazc))
+- undo ([@rubenpazc](https://github.com/rubenpazc))
+- new setup ([@rubenpazc](https://github.com/rubenpazc))
+- npmrc ([@rubenpazc](https://github.com/rubenpazc))
+- new lock file ([@rubenpazc](https://github.com/rubenpazc))
+- fix rollup ([@rubenpazc](https://github.com/rubenpazc))
+- fix ([@rubenpazc](https://github.com/rubenpazc))
+- node update ([@rubenpazc](https://github.com/rubenpazc))
+- new changes ([@rubenpazc](https://github.com/rubenpazc))
+- more colors ([@rubenpazc](https://github.com/rubenpazc))
+- storybook upgrade ([@rubenpazc](https://github.com/rubenpazc))
+- new settings ([@rubenpazc](https://github.com/rubenpazc))
+- setup updates ([@rubenpazc](https://github.com/rubenpazc))
+- new version 1.0.17 ([@rubenpazc](https://github.com/rubenpazc))
+- upgrade ([@rubenpazc](https://github.com/rubenpazc))
+- fix linters ([@rubenpazc](https://github.com/rubenpazc))
+- format code ([@rubenpazc](https://github.com/rubenpazc))
+- fix tsconfig ([@rubenpazc](https://github.com/rubenpazc))
+- update package json ([@rubenpazc](https://github.com/rubenpazc))
+
+#### Authors: 1
+
+- Ruben Paz Chuspe ([@rubenpazc](https://github.com/rubenpazc))
+
+---
+
 # v1.0.16 (Sun Aug 27 2023)
 
 #### ⚠️ Pushed to `main`
