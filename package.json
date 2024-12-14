@@ -93,7 +93,7 @@
   ],
   "types": "dist/index.d.ts",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/lbyteperu"
+    "registry": "https://npmjs.com/org/lbyteperu"
   },
   "dependencies": {
     "@storybook/test": "^8.4.7",
