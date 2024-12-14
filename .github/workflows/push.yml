@@ -18,11 +18,11 @@ jobs:
     # if: "!contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci')"
     # The list of steps that the action will go through
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Prepare repository
         run: git fetch --unshallow --tags
       - name: Use Node.js 21.x
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: 21.x
       - name: Cache node modules
@@ -32,6 +32,11 @@ jobs:
           key: yarn-deps-${{ hashFiles('yarn.lock') }}
           restore-keys: |
             yarn-deps-${{ hashFiles('yarn.lock') }}
+      - name: Authenticate with npm
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: echo "//registry.npmjs.org/:_authToken=\${NODE_AUTH_TOKEN}" > ~/.npmrc
+
       - name: Create Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
