@@ -1,6 +1,6 @@
 {
   "name": "@lbyteperu/lbyte-ui-library",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "A simple template for a custom React component library",
   "repository": "https://github.com/lbyteperu/lbyte-ui-library.git",
   "author": "Ruben Paz Chuspe <rubenpazchuspe@outlook.com>",
@@ -14,7 +14,8 @@
     "release": "auto shipit --base-branch=main",
     "format": "prettier --write --parser typescript '**/*.{ts,tsx}'",
     "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore --fix",
-    "build-tsc": "tsc"
+    "build-tsc": "tsc",
+    "publish": "npm publish"
   },
   "engines": {
     "node": "21.7.3"
@@ -88,12 +89,12 @@
   },
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/lbyteperu"
+    "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
     "@storybook/test": "^8.4.7",
