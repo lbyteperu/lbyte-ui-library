@@ -1,8 +1,8 @@
 {
-  "name": "@lbyteperu/lbyte-ui-library",
-  "version": "1.0.18",
+  "name": "@rubenpazch/lbyte-ui-library",
+  "version": "1.0.19",
   "description": "A simple template for a custom React component library",
-  "repository": "https://github.com/lbyteperu/lbyte-ui-library.git",
+  "repository": "https://github.com/rubenpazch/lbyte-ui-library.git",
   "author": "Ruben Paz Chuspe <rubenpazchuspe@outlook.com>",
   "license": "MIT",
   "scripts": {
